@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 	root 'application#home'
+	get 'about', to:'application#about'
+	get 'secrets', to: 'application#secrets'
   resources :users
   resources :categories
   resources :food_recipes

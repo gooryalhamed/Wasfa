@@ -1,0 +1,15 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+h1{
+font-size:80px;color:#00e673;
+font-family:'Kaushan Script';
+}
+.custom-header{
+	margin-top: 120px;background-color:#333333;border-radius:0;padding:12px;
+}
+.custom-header .nav li a{
+	color:#e6e6e6;font-size:20px;
+}
+.custom-header .nav li a:hover{
+	background-color:#00b359;color:#fff;
+}

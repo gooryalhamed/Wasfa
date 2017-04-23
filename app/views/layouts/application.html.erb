@@ -8,9 +8,9 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-		<h1>
-			Wasfa
-		</h1>
+	<h1>
+		Wasfa
+	</h1>
 	<nav class="navbar navbar-default navbar-fixed-top custom-header">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -21,7 +21,20 @@
 			<div class="collapse navbar-collapse navbar-right" id="navbar-links">
 				<ul class="nav navbar-nav">
 					<li><%= link_to 'Home', root_path %></a></li>
-					<li><%= link_to 'Ctegories', categories_path %></a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="categories">Categories
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Main Courses</a></li>
+							<li><a href="#">Side Orders</a></li>
+							<li><a href="#">Salads</a></li>
+							<li><a href="#">Drinks</a></li>
+							<li><a href="#">Appetizers</a></li>
+							<li><a href="#">Soups</a></li>
+							<li><a href="#">Desserts</a></li>
+						</ul>
+					</li>
 					<li><%= link_to 'recipes', food_recipes_path %></a></li>
 					<li><%= link_to 'About', about_path %></li>
 					<li><%= link_to 'Kitchen Secrets', secrets_path %></li>

@@ -1,4 +1,4 @@
-class AdminController < ActionController::Base
-	def control_panel	
+class AdminController < ApplicationController
+	def control_panel
 	end
 end

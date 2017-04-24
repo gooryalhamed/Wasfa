@@ -3,17 +3,19 @@
 .panel{height:400px;margin-top:100px;
 padding-top:10px
 }
-.panel-body a{
+.container a{
 	text-decoration:none;color:#202020;border:2px solid #bfbfbf;
-	padding: 4px 10px;border-radius:4px;display:block;width:100px;
+	padding: 4px 14px;border-radius:4px;display:block;width:100px;
 	margin-bottom:8px
 }
-.container .sidenav{
-	height:300px;width:130px;border-right:1px solid #d9d9d9;padding-top:30px
+.container a:hover{
+	box-shadow:1px 1px 8px #707070;background-color:#ffd9b3;border-color:#ffd9b3}
+.container #sidenav{
+	height:300px;width:130px;border-right:1px solid #d9d9d9
 }
 .container p{
 	font-size:22px;
 }
 .container #bar{
-	border-bottom:1px solid #d9d9d9;
+	border-bottom:1px solid #d9d9d9;margin-bottom:40px;margin-top:40px
 }

@@ -1,7 +1,8 @@
-class CategoriesController < ApplicationController
+class Admin::CategoriesController < ApplicationController
 	before_action :find_category, only: [:show, :edit, :update, :destroy]
 	def index
 		@categories = Category.all
+		render layout: 'admin'
 	end
 	def new
 		@category = Category.new

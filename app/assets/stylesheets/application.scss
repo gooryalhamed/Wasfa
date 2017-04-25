@@ -6,6 +6,7 @@ font-family:'Eagle Lake';margin-left:8px;
 }
 .custom-header{
 	margin-top:100px;border-radius:0;padding:6px;background-color:#d1d1e0;
+	border:1px dotted #29293d;
 }
 #logo img{max-width:4%;position:absolute;top:23px;left:220px;}
 .custom-header .nav li a{
@@ -23,6 +24,6 @@ font-family:'Eagle Lake';margin-left:8px;
 
 /*footer*/
 footer{
-	margin-top:200px;bottom:0;border:1px solid #808080;
+	margin-top:200px;bottom:0;border:1px dotted #808080;
 	padding:8px;font-family:sans;font-size:14px;
 }

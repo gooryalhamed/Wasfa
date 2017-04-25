@@ -17,6 +17,10 @@ font-family:'Eagle Lake';margin-left:8px;
 .custom-header .dropdown-menu li a{
 	color:#202020
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /*footer*/
 footer{
 	margin-top:200px;bottom:0;border:1px solid #808080;

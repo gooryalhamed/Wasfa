@@ -1,17 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 h1{
-font-size:80px;color:#00e673;
-font-family:'Kaushan Script';
+font-size:60px;color:#29293d;
+font-family:'Eagle Lake';margin-left:8px;
 }
 .custom-header{
-	margin-top: 120px;background-color:#333333;border-radius:0;padding:12px;
+	margin-top:100px;border-radius:0;padding:6px;background-color:#d1d1e0;
 }
+#logo img{max-width:4%;position:absolute;top:25px;left:220px;}
 .custom-header .nav li a{
-	color:#e6e6e6;font-size:20px;
+	font-size:16px;letter-spacing:1px;
 }
 .custom-header .nav li a:hover{
-	background-color:#00b359;color:#fff;
+	background-color:#29293d;color:#fff;
 }
 .custom-header .dropdown-menu li a{
 	color:#202020

@@ -6,7 +6,7 @@
 	<% @categories.each do |cat| %>
 	<li><%= cat.name %>
 		<%= link_to 'Edit', edit_admin_category_path(cat) %>
-		<%= link_to 'Delete',cat,url: admin_categories_path, method: :delete, confirm:'Are you sure?'%>
+		<%= link_to 'Delete',[:admin,cat], method: :delete, confirm:'Are you sure?'%>
 	</li>
 	<% end %>
 	<a href="/admin">Back to Panel</a>

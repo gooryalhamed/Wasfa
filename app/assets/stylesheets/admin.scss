@@ -10,7 +10,9 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
 }
-
+#links{
+    list-style-type:none;
+}
 /* The navigation menu links */
 .sidenav a {
 	padding:8px 20px;

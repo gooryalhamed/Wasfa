@@ -1,32 +1,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-.panel{height:400px;margin-top:100px;
-padding-top:10px
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width:250px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
 }
-.container #sidenav a{
-	text-decoration:none;color:#202020;border:2px solid #bfbfbf;
-	padding: 4px 14px;border-radius:4px;display:block;width:100px;
-	margin-bottom:8px
+
+/* The navigation menu links */
+.sidenav a {
+	padding:8px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    cursor:pointer;
 }
-.container #sidenav a:hover{
-	box-shadow:1px 1px 8px #707070;background-color:#ffd9b3;border-color:#ffd9b3}
-.container #sidenav{
-	height:300px;width:130px;border-right:1px solid #d9d9d9
-}
-.container p{
-	font-size:22px;
-}
-.container #bar{
-	border-bottom:1px solid #d9d9d9;margin-bottom:40px;margin-top:40px
-}
-.container{
-	margin-top: 200px;border:1px solid #ccc;
-	padding:30px 30px;width:300px;height:150px;border-radius:4px;background-color:#80ffaa;
-}
-.container #field{
-	margin-bottom:20px
-}
-#btn{margin-left:40px;padding:4px 10px;}
-ul{
-	list-style-type:none;font-size:30px;margin-top:150px
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+    color:#00b300;
 }

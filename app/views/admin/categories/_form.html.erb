@@ -2,7 +2,7 @@
 	<%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <div class="container text_center">
-	<%= form_for(@category, :url =>admin_category_path(@category)) do |f|%>
+	<%= form_for([:admin, @category]) do |f|%>
 	<div class="row">
 		<div class="col-sm-12" id="field">
 			<%= f.label :name %>

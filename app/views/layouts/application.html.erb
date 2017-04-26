@@ -29,13 +29,9 @@
 							<span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Main Courses</a></li>
-							<li><a href="#">Side Orders</a></li>
-							<li><a href="#">Salads</a></li>
-							<li><a href="#">Drinks</a></li>
-							<li><a href="#">Appetizers</a></li>
-							<li><a href="#">Soups</a></li>
-							<li><a href="#">Desserts</a></li>
+							<% Category.all.each do |cat| %>
+								<li><a><%= cat.name %></a></li>
+							<% end %>
 						</ul>
 					</li>
 					<li><%= link_to 'recipes', food_recipes_path %></a></li>

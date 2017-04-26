@@ -9,18 +9,18 @@ class Admin::CategoriesController < ApplicationController
 	end
 	def create
 		@category = Category.create(category_params)
-		redirect_to categories_path
+		redirect_to admin_categories_path
 	end
 	def edit
 	end
 	def update
 		if @category.update(category_params) then
-			redirect_to categories_path
+			redirect_to admin_categories_path
 		end
 	end
 	def destroy
 		@category.destroy
-		redirect_to categories_path
+		redirect_to admin_categories_path
 	end
 	private
 	def category_params

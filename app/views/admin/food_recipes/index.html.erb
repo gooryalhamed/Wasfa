@@ -1,0 +1,15 @@
+<head>
+	<%= stylesheet_link_tag 'categories', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<div class="row">
+<ul>
+	<% @food_recipes.each do |recipe| %>
+	<li><%= cat.name %>
+		<%= link_to 'Edit', edit_food_recipe_path(recipe) %>
+		<%= link_to 'destroy',recipe,method: :delete, data: {confirm: 'Are you sure?'}  %>
+	</li>
+	<% end %>
+	<a href="/admin">Back to Panel</a>
+</ul>
+</div>
+	

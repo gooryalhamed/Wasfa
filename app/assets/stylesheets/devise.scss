@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{background-color:#29293d}
+.container{margin-top:150px;margin-left:450px;
+width:400px; border: 1px solid #bfbfbf;background-color:#fff;
+padding:20px 20px
+}
+.container h2{
+color:#29293d;font-size:40px;border-bottom:1px solid #808080;
+padding-bottom:15px;margin-bottom:20px;
+}
+.container input:not([type="checkbox"]){
+	width:240px;
+}
+.container a{color:#004080}
+.container form{margin-bottom:10px}
+.container #user_password_confirmation{margin-bottom:15px}

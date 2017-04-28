@@ -9,21 +9,21 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		<nav class="navbar upper-nav">
 			<div id="logo" class="col-xs-9">
 				<h1>Wasfa</h1>
 				<%= image_tag('Soup-icon.png') %>
 			</div>
 			<div class="col-xs-3" id="user">
 				<% if user_signed_in? %>
-				Logged in as <strong><%= current_user.email %></strong>.
+				Logged in as <strong><%= current_user.email %></strong>
 				<%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 				<% else %>
 				<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
 				<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 				<% end %>
 			</div>
-		</div>
+		</nav>
 		<nav class="navbar navbar-default navbar-fixed-top custom-header">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -31,26 +31,27 @@
 						<i class="fa fa-bars"></i>
 					</button>
 				</div>
-			<div class="collapse navbar-collapse navbar-right" id="navbar-links">
-				<ul class="nav navbar-nav">
-					<li><%= link_to 'Home', root_path %></li>
-					<li class="dropdown">
-						<a href="categories">Categories
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<% Category.all.each do |cat| %>
-							<li><a><%= cat.name %></a></li>
-							<% end %>
-						</ul>
-					</li>
-					<li><%= link_to 'recipes', food_recipes_path %></li>
-					<li><%= link_to 'About', about_path %></li>
-					<li><%= link_to 'Kitchen Secrets', secrets_path %></li>
-				</ul>
+				<div class="collapse navbar-collapse navbar-right" id="navbar-links">
+					<ul class="nav navbar-nav">
+						<li><%= link_to 'Home', root_path %></li>
+						<li class="dropdown">
+							<a href="categories">Categories
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<% Category.all.each do |cat| %>
+								<li><a><%= cat.name %></a></li>
+								<% end %>
+							</ul>
+						</li>
+						<li><%= link_to 'recipes', food_recipes_path %></li>
+						<li><%= link_to 'About', about_path %></li>
+						<li><%= link_to 'Kitchen Secrets', secrets_path %></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</nav>
+		</nav>
+	</div>
 	<%= yield %>
 	<footer>
 		<div class="container">
@@ -59,6 +60,5 @@
 			</div>
 		</div>
 	</footer>
-</div>
 </body>
 </html>

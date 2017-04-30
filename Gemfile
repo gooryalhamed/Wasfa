@@ -14,6 +14,9 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 # use devise for authentication
 gem 'devise'
+gem 'omniauth-facebook'
+# use cancancan for authorization
+gem 'cancancan', '~> 1.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'

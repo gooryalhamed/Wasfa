@@ -2,44 +2,53 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 #upper-nav h1{
-font-size:60px;color:#29293d;display:inline-block;
-font-family:'Eagle Lake';
+font-size:40px;color:#132639;font-family:'Eagle Lake';margin-top:30px;
 }
-#upper-nav #user{padding-top:60px;text-align:right}
-#upper-nav a{
-	margin-right:10px;color:#29293d;
-}
+#upper-nav #user{padding-top:50px;text-align:right}
+#upper-nav a{color:#29293d}
+#upper-nav span{color:#ffcc00;font-size:20px;font-weight:700}
 #upper-nav #logo{padding-left:40px}
 #upper-nav img{
-max-width:4%;position:absolute;left:255px;top:40px;
+max-width:4%;position:absolute;left:186px;top:35px;
 }
 /*lower nav */
 #lower-nav{
-	margin-top:100px;border-radius:0;padding:6px;
-	background-color:#d1d1e0;
-	border:1px dotted #29293d;
+margin:0px auto;width:1140px;border-top:1px solid #808080;
+border-bottom:1px solid #808080;border-radius:0;background-color:#fff;
 }
 #lower-nav .nav li a{
-	font-size:16px;letter-spacing:1px;color:#666666
+font-size:16px;letter-spacing:1px;color:#666666;margin-right:10px;
+border-bottom:3px solid #fff;transition:all 0.3s;
 }
 #lower-nav .nav li a:hover{
-	background-color:#29293d;color:#fff;
+background-color:#fff;border-bottom-color:#ffcc00;
 }
 #lower-nav .dropdown-menu li a{
-	color:#202020
+color:#202020
 }
 .dropdown:hover .dropdown-menu {
-    display: block;
+display: block;
 }
 #lower-nav .navbar-toggle{
-	border-color:#29293d;background-color:#29293d;color:#fff
+border-color:#29293d;background-color:#29293d;color:#fff
 }
 #lower-nav .navbar-toggle:hover{
-	color:#29293d;border-color:#29293d;background-color:#fff
+color:#29293d;border-color:#29293d;background-color:#fff
 }
 /*footer*/
 footer{
-	margin-top:200px;bottom:0;border:1px dotted #808080;
-	padding:8px;font-family:sans;font-size:14px;
+margin-top:200px;bottom:0;border:1px dotted #808080;
+padding:8px;font-family:sans;font-size:14px;
 }
+/* header */
+header{margin-top:40px;}
+header #first-row{
+border:1px solid #808080;width:850px;height:460px;
+margin-left:140px;padding-left:60px;padding-top:30px;
+}
+header #first-row p{font-size:50px;}
+header h1{font-size:70px;font-family:'Josefin Sans';color:#715540;}
+header .heading{margin-bottom:20px;margin-top:80px}
+header .box{border:1px solid #808080;height:200px;}

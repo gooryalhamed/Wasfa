@@ -4,55 +4,70 @@
 	<title>Admin Dashboard</title>
 	<%= csrf_meta_tags %>
 	<%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-	<div class="container">
+	<div id="navbar">
 		<div class="row">
-			<div class="col-xs-12">
-				<% if user_signed_in? %>
-				<strong><%= current_user.username %></strong>
-				<%= link_to "log out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-				<% end %>
+			<div class="col-xs-2">
+				<p id="project">WASFA</p>
+			</div>
+			<div class="col-xs-1">
+				<i class="fa fa-comment-o" aria-hidden="true"></i>
+				&emsp;
+				<i class="fa fa-bell-o" aria-hidden="true"></i>
+			</div>
+			<div class="dropdown col-xs-2" id="dropdown">
+				<span>Admin</span>
+				<span class="caret"></span>
+				<ul class="dropdown-menu" id="admin-menu">
+					<li class="li">Settings</li>
+					<li class="li">Messages</li>
+					<li>logout</li>
+				</ul>
+				<%= image_tag('profile.jpg') %>
 			</div>
 		</div>
-		<div class="sidenav">
-			<div id="home">
-				<i class="fa fa-home" aria-hidden="true"></i>
-				<a href="/admin">Home</a>
-				<hr>
-			</div>
-			<div class="collapsed menu" data-toggle="collapse" data-target="#catlinks">
-				<span>Category</span>
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			</div>
-			<ul id="catlinks" class="collapse">
-				<li><%= link_to 'All', admin_categories_path%></li>
-				<li><%= link_to 'New', new_admin_category_path%></li>
-			</ul>
-
-			<div class="collapsed menu" data-toggle="collapse" data-target="#reclinks">
-				<span>Recipe</span>
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			</div>
-			<ul id="reclinks" class="collapse">
-				<li><%= link_to 'All', admin_food_recipes_path%></li>
-				<li><%= link_to 'New', new_admin_food_recipe_path%></li>
-			</ul>
-
-			<div class="collapsed menu" data-toggle="collapse" data-target="#sitelinks">
-				<span>My Site</span>
-				<i class="fa fa-chevron-right" aria-hidden="true"></i>
-			</div>
-			<ul id="sitelinks" class="collapse">
-				<li><a href="/" target="_blank">Home page</a></li>
-				<li><a href="/categories" target="_blank">Categories</a></li>
-				<li><a href="food_recipes" target="_blank">Recipes</a></li>
-				<li><a href="about" target="_blank">About</a></li>
-				<li><a href="secrets" target="_blank">Kitchen Secrets</a></li>
-			</ul>
-		</div>
-		<%= yield %>
 	</div>
+</div>
+<!-- sidebar -->
+<div class="sidenav">
+	<div id="home">
+		<i class="fa fa-home" aria-hidden="true"></i>
+		<a href="/admin">Dashboard</a>
+		<hr>
+	</div>
+	<div class="collapsed menu" data-toggle="collapse" data-target="#catlinks">
+		<span>Category</span>
+		<i class="fa fa-chevron-right" aria-hidden="true"></i>
+	</div>
+	<ul id="catlinks" class="collapse">
+		<li><%= link_to 'All', admin_categories_path%></li>
+		<li><%= link_to 'New', new_admin_category_path%></li>
+	</ul>
+
+	<div class="collapsed menu" data-toggle="collapse" data-target="#reclinks">
+		<span>Recipe</span>
+		<i class="fa fa-chevron-right" aria-hidden="true"></i>
+	</div>
+	<ul id="reclinks" class="collapse">
+		<li><%= link_to 'All', admin_food_recipes_path%></li>
+		<li><%= link_to 'New', new_admin_food_recipe_path%></li>
+	</ul>
+
+	<div class="collapsed menu" data-toggle="collapse" data-target="#sitelinks">
+		<span>My Site</span>
+		<i class="fa fa-chevron-right" aria-hidden="true"></i>
+	</div>
+	<ul id="sitelinks" class="collapse">
+		<li><a href="/" target="_blank">Home page</a></li>
+		<li><a href="/categories" target="_blank">Categories</a></li>
+		<li><a href="food_recipes" target="_blank">Recipes</a></li>
+		<li><a href="about" target="_blank">About</a></li>
+		<li><a href="secrets" target="_blank">Kitchen Secrets</a></li>
+	</ul>
+</div>
+<%= yield %>
 </body>
 </html>

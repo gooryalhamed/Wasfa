@@ -6,7 +6,7 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
     position: fixed; /* Stay in place */
-    top: 0;
+    top:30;
     left: 0;
     width:250px;
     background-color: #111; /* Black*/
@@ -38,3 +38,17 @@ color:#202020;font-size:16px;display:block;margin-bottom:8px;
 color:#fff;padding-top:8px;position:absolute;left:200px
 }
 .sidenav .menu{padding:4px;cursor:pointer}
+/* navigation bar */
+#navbar{
+padding:14px 0px;border-bottom:1px solid #bfbfbf;
+}
+#navbar #project{
+font-size:30px;font-family:'Bad Script';margin-left:40px;padding-top:30px
+}
+#navbar .dropdown{cursor:pointer}
+#navbar .dropdown-menu{margin-top:10px;min-width:110px;padding:0px}
+#navbar .dropdown-menu li{text-align:center;padding:6px 0px}
+#navbar .dropdown-menu li:hover{background-color:#ffffcc}
+#navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
+#navbar img{max-width:30%;border-radius:50%}
+#navbar .fa{font-size:120%;padding-top:20px}

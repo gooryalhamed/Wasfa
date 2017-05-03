@@ -17,15 +17,39 @@
 			</div>
 		</div>
 		<div class="sidenav">
-			<%= link_to 'Categories', admin_categories_path%>
-			<%= link_to 'Recipes', admin_food_recipes_path%>
-			<a data-toggle="collapse" data-target="#links">My Site</a>
-			<ul id="links" class="collapse">
-				<li><a href="/" target="_blank">home</a></li>
-				<li><a href="/categories" target="_blank">categories</a></li>
-				<li><a href="food_recipes" target="_blank">recipes</a></li>
-				<li><a href="about" target="_blank">about</a></li>
-				<li><a href="secrets" target="_blank">kitchen secrets</a></li>
+			<div id="home">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				<a href="/admin">Home</a>
+				<hr>
+			</div>
+			<div class="collapsed menu" data-toggle="collapse" data-target="#catlinks">
+				<span>Category</span>
+				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</div>
+			<ul id="catlinks" class="collapse">
+				<li><%= link_to 'All', admin_categories_path%></li>
+				<li><%= link_to 'New', new_admin_category_path%></li>
+			</ul>
+
+			<div class="collapsed menu" data-toggle="collapse" data-target="#reclinks">
+				<span>Recipe</span>
+				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</div>
+			<ul id="reclinks" class="collapse">
+				<li><%= link_to 'All', admin_food_recipes_path%></li>
+				<li><%= link_to 'New', new_admin_food_recipe_path%></li>
+			</ul>
+
+			<div class="collapsed menu" data-toggle="collapse" data-target="#sitelinks">
+				<span>My Site</span>
+				<i class="fa fa-chevron-right" aria-hidden="true"></i>
+			</div>
+			<ul id="sitelinks" class="collapse">
+				<li><a href="/" target="_blank">Home page</a></li>
+				<li><a href="/categories" target="_blank">Categories</a></li>
+				<li><a href="food_recipes" target="_blank">Recipes</a></li>
+				<li><a href="about" target="_blank">About</a></li>
+				<li><a href="secrets" target="_blank">Kitchen Secrets</a></li>
 			</ul>
 		</div>
 		<%= yield %>

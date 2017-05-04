@@ -4,6 +4,7 @@
 //= require bootstrap-sprockets
 $(document).ready(function(){
 	AdminList()
+	showSidebar()
 })
 
 function AdminList(){
@@ -20,5 +21,17 @@ function AdminList(){
 		else{
 			document.getElementById("admin-menu").style.display = "none"
 		}
+	})
+}
+function showSidebar(){
+	var bars = $('.navbar-header .fa-bars');
+	bars.click(function(e){
+		if(document.getElementById("sidebar").style.display = "none"){
+			document.getElementById("sidebar").style.display = "block";
+		}
+		else{
+			document.getElementById("sidebar").style.display = "none";
+		}
+		
 	})
 }

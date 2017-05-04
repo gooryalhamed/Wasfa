@@ -42,7 +42,7 @@ color:#fff;padding-top:8px;position:absolute;left:200px
 #navbar{padding:12px 0px;border-bottom:1px solid #bfbfbf}
 #navbar img{max-width:20%;border-radius:50%}
 #navbar .dropdown{width:200px;cursor:pointer}
-#navbar .navbar-brand{font-size:30px;font-family:'Bad Script'}
+#navbar #logo{font-size:30px;font-family:'Bad Script'}
 #navbar ul .icon{
 height:40px;border-right:1px solid #bfbfbf;margin-top:8px;
 padding-right:15px;font-size:140%
@@ -53,3 +53,9 @@ padding-right:15px;font-size:140%
 }
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
 #navbar .dropdown-menu li:hover{background-color:#ffffcc}
+#navbar .fa-bars{cursor:pointer}
+/* responsive stie */
+@media(max-width:768px){
+    #navbar .navbar-nav,#navbar .navbar-header{display:inline}
+    .sidenav{display:none}
+}

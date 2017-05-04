@@ -8,14 +8,16 @@ $(document).ready(function(){
 
 function AdminList(){
 	var menu = $('#navbar .dropdown')
+	$(document).on('click',function(event){
+		if(event.target.id != "admin-menu" && !menu.has(event.target).length) {
+			document.getElementById("admin-menu").style.display = "none"
+		}
+	})
 	menu.on('click',function(e){
 		if(document.getElementById("admin-menu").style.display=="none"){
 			document.getElementById("admin-menu").style.display = "block"
 		}
 		else{
-			document.getElementById("admin-menu").style.display = "none"
-		}
-		if(e.target.id != menu.attr('id') && !menu.has(e.target).length) {
 			document.getElementById("admin-menu").style.display = "none"
 		}
 	})

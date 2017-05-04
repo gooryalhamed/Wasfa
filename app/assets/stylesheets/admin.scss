@@ -6,7 +6,7 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
     position: fixed; /* Stay in place */
-    top:30;
+    top:70px;
     left: 0;
     width:250px;
     background-color: #111; /* Black*/
@@ -39,16 +39,19 @@ color:#fff;padding-top:8px;position:absolute;left:200px
 }
 .sidenav .menu{padding:4px;cursor:pointer}
 /* navigation bar */
-#navbar{
-padding:14px 0px;border-bottom:1px solid #bfbfbf;
-}
+#navbar{border-bottom:1px solid #bfbfbf;}
 #navbar #project{
-font-size:30px;font-family:'Bad Script';margin-left:40px;padding-top:30px
+font-family:'Bad Script';margin-left:25px;font-size:30px
 }
+#navbar .box{border-left:1px solid #bfbfbf;height:70px}
 #navbar .dropdown{cursor:pointer}
 #navbar .dropdown-menu{margin-top:10px;min-width:110px;padding:0px}
 #navbar .dropdown-menu li{text-align:center;padding:6px 0px}
 #navbar .dropdown-menu li:hover{background-color:#ffffcc}
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
-#navbar img{max-width:30%;border-radius:50%}
-#navbar .fa{font-size:120%;padding-top:20px}
+#navbar img{max-width:22%;border-radius:50%}
+#navbar .col-xs-1{font-size:130%;margin-left:760px;padding-top:20px}
+#navbar .col-xs-2{padding:12px 20px}
+body{overflow-x:hidden}
+#navbar .fa-envelope-o{margin-right:18px}
+#navbar .fa-bars{cursor:pointer}

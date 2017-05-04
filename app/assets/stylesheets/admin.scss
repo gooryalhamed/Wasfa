@@ -3,7 +3,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 /*side navbar */
-.sidenav {
+#sidebar {
     height: 100%; /* 100% Full-height */
     position: fixed;
     top:78px;
@@ -13,15 +13,15 @@
     overflow-x: hidden;
     padding-top: 60px;
 }
-.sidenav #home{padding:0px 14px;color:#fff;font-size:18px}
-.sidenav #home a{color:#fff}
-.sidenav ul li a{
+#sidebar #home{padding:0px 14px;color:#fff;font-size:18px}
+#sidebar #home a{color:#fff}
+#sidebar ul li a{
 font-size:16px;display:block;color:#fff;border-bottom:2px solid #111;
 transition:all 0.3s;
 }
-.sidenav ul li a:hover{border-bottom-color:#fff}
-.sidenav a,.sidenav a:hover{text-decoration:none}
-.sidenav span{
+#sidebar ul li a:hover{border-bottom-color:#fff}
+#sidebar a,#sidebara:hover{text-decoration:none}
+#sidebar span{
 	padding:8px 40px;
     font-size: 18px;
     color: #fff;

@@ -43,9 +43,11 @@ color:#fff;padding-top:8px;position:absolute;left:200px
 #navbar img{max-width:20%;border-radius:50%}
 #navbar .dropdown{width:200px;cursor:pointer}
 #navbar .navbar-brand{font-size:30px;font-family:'Bad Script'}
-#navbar ul .fa{
-margin-top:12px;border-right:1px solid #bfbfbf;padding-right:15px;
+#navbar ul .icon{
+height:40px;border-right:1px solid #bfbfbf;margin-top:8px;
+padding-right:15px;font-size:140%
 }
+#navbar .fa-bell-o{margin-right:16px}
 #navbar .dropdown-menu{opacity:0.9;padding:0px} /*remove padding to change background-color of each li*/
 #navbar .dropdown-menu li{padding:6px 15px;
 }

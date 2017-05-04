@@ -2,16 +2,15 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
 #upper-nav h1{
-font-size:40px;color:#132639;font-family:'Eagle Lake';margin-top:30px;
+font-size:40px;color:#132639;font-family:'Eagle Lake';margin-top:25px;
 }
 #upper-nav #user{padding-top:50px;text-align:right}
 #upper-nav a{color:#29293d}
 #upper-nav span{color:#ffcc00;font-size:20px;font-weight:700}
 #upper-nav #logo{padding-left:40px}
 #upper-nav img{
-max-width:4%;position:absolute;left:186px;top:35px;
+max-width:4%;position:absolute;left:186px;top:30px;
 }
 /*lower nav */
 #lower-nav{
@@ -43,15 +42,8 @@ margin-top:100px;bottom:0;border:1px dotted #808080;
 padding:8px;font-family:sans;font-size:14px;
 }
 /* header */
-header{margin-top:40px;}
-header #first-row{
-border:1px solid #808080;height:460px;
-padding-left:10px;padding-top:30px;
-}
+header img{max-width:100%}
 header h1{font-size:60px;font-family:'Josefin Sans';color:#715540;}
 header .heading{margin-bottom:20px;margin-top:80px}
 header .box{border:1px solid #808080;height:200px;}
-header #first-row p{
-border:2px solid #715540;font-size:16px;
-width:150px;padding:4px 12px;cursor:pointer;
-}
+.carousel-control{padding-top:170px}

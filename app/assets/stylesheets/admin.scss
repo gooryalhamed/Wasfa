@@ -56,7 +56,7 @@ padding-right:15px;font-size:140%
     #sidebar{display:none}
     #navbar #logo{font-size:24px}
 }
-/**** index ****/
+/**** new & edit ****/
 .wrapper{margin-left:300px;margin-top:30px;}
 #title{color:#e6ac00;margin-bottom:50px;font-size:22px
 }
@@ -65,9 +65,11 @@ border:1px solid #bfbfbf;padding:25px;border-radius:4px;width:600px;
 font-size:18px;box-shadow:1px 1px 4px #bfbfbf
 }
 #form-wrapper input[type=text]{width:400px;margin-bottom:20px}
-#form-wrapper .btn{
-border:1px solid #8080ff;background-color:#8080ff;font-size:16px;
-padding:4px 18px;margin-left:30px;color:#fff;width:160px;
+.wrapper .btn{
+border:1px solid #8080ff;background-color:#8080ff;font-size:14px;
+padding:4px 0px;margin-left:30px;color:#fff;width:130px;
 margin-bottom:10px
 }
 body{background-color:#f2f2f2}
+/**** index *****/
+.wrapper .row{margin-bottom:30px}

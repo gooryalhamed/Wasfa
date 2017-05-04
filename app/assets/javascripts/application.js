@@ -26,12 +26,13 @@ function AdminList(){
 function showSidebar(){
 	var bars = $('.navbar-header .fa-bars');
 	bars.click(function(e){
-		if(document.getElementById("sidebar").style.display = "none"){
+		if(document.getElementById("sidebar").style.display == "none"){
 			document.getElementById("sidebar").style.display = "block";
 		}
 		else{
 			document.getElementById("sidebar").style.display = "none";
 		}
-		
+
 	})
 }
+

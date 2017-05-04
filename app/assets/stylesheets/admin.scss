@@ -5,13 +5,13 @@
 /*side navbar */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    position: fixed; /* Stay in place */
+    position: fixed;
     top:75px;
     left: 0;
     width:250px;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
 }
 .sidenav #home{padding:0px 14px;color:#fff;font-size:18px}
 .sidenav #home a{color:#fff}
@@ -48,7 +48,7 @@ height:40px;border-right:1px solid #bfbfbf;margin-top:8px;
 padding-right:15px;font-size:140%
 }
 #navbar .fa-bell-o{margin-right:16px}
-#navbar .dropdown-menu{opacity:0.9;padding:0px} /*remove padding to change background-color of each li*/
+#navbar .dropdown-menu{padding:0px} /*remove padding to change background-color of each li*/
 #navbar .dropdown-menu li{padding:6px 15px;
 }
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
@@ -56,6 +56,6 @@ padding-right:15px;font-size:140%
 #navbar .fa-bars{cursor:pointer}
 /* responsive stie */
 @media(max-width:768px){
-    #navbar .navbar-nav,#navbar .navbar-header{display:inline}
-    .sidenav{display:none}
+    #sidebar{display:none}
+    #navbar #logo{font-size:24px}
 }

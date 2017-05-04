@@ -6,7 +6,7 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
     position: fixed;
-    top:75px;
+    top:78px;
     left: 0;
     width:250px;
     background-color: #111;
@@ -15,13 +15,11 @@
 }
 .sidenav #home{padding:0px 14px;color:#fff;font-size:18px}
 .sidenav #home a{color:#fff}
-.sidenav ul{
-    list-style-type:none;background-color:#ffffcc;padding-top:8px;
-    border:1px solid #606060;
-}
 .sidenav ul li a{
-color:#202020;font-size:16px;display:block;margin-bottom:8px;
+font-size:16px;display:block;color:#fff;border-bottom:2px solid #111;
+transition:all 0.3s;
 }
+.sidenav ul li a:hover{border-bottom-color:#fff}
 .sidenav a,.sidenav a:hover{text-decoration:none}
 .sidenav span{
 	padding:8px 40px;
@@ -29,32 +27,31 @@ color:#202020;font-size:16px;display:block;margin-bottom:8px;
     color: #fff;
     cursor:pointer;
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav span:hover{
-    color:#ffff4d;
-}
-.sidenav .fa-chevron-right{
+#sidebar span:hover{color:#ffff4d}
+#sidebar .fa-chevron-right{
 color:#fff;padding-top:8px;position:absolute;left:200px
 }
-.sidenav .menu{padding:4px;cursor:pointer}
-/* navigation bar */
+#sidebar .menu{padding:4px;cursor:pointer}
+#sidebar ul{list-style-type:none;padding:0px}
+#sidebar ul li{padding:8px 60px}
+/**** navigation bar ****/
 #navbar{padding:12px 0px;border-bottom:1px solid #bfbfbf}
+#navbar #logo{font-size:30px;font-family:'Bad Script';margin-top:6px}
 #navbar img{max-width:20%;border-radius:50%}
+#navbar .navbar-nav{margin-top:6px}
 #navbar .dropdown{width:200px;cursor:pointer}
-#navbar #logo{font-size:30px;font-family:'Bad Script'}
 #navbar ul .icon{
 height:40px;border-right:1px solid #bfbfbf;margin-top:8px;
 padding-right:15px;font-size:140%
 }
 #navbar .fa-bell-o{margin-right:16px}
-#navbar .dropdown-menu{padding:0px} /*remove padding to change background-color of each li*/
-#navbar .dropdown-menu li{padding:6px 15px;
-}
+#navbar .fa-bars{cursor:pointer;margin-left:8px}
+#navbar .dropdown-menu li{padding:6px 15px}
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
 #navbar .dropdown-menu li:hover{background-color:#ffffcc}
-#navbar .fa-bars{cursor:pointer;margin-left:8px}
-/* responsive stie */
+#navbar .dropdown-menu{padding:0px;margin-right:20px} /*remove padding to change background-color of each li*/
+
+/**** responsive stie *****/
 @media(max-width:768px){
     #sidebar{display:none}
     #navbar #logo{font-size:24px}

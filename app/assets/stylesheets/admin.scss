@@ -6,7 +6,7 @@
 .sidenav {
     height: 100%; /* 100% Full-height */
     position: fixed; /* Stay in place */
-    top:70px;
+    top:75px;
     left: 0;
     width:250px;
     background-color: #111; /* Black*/
@@ -39,19 +39,15 @@ color:#fff;padding-top:8px;position:absolute;left:200px
 }
 .sidenav .menu{padding:4px;cursor:pointer}
 /* navigation bar */
-#navbar{border-bottom:1px solid #bfbfbf;}
-#navbar #project{
-font-family:'Bad Script';margin-left:25px;font-size:30px
+#navbar{padding:12px 0px;border-bottom:1px solid #bfbfbf}
+#navbar img{max-width:20%;border-radius:50%}
+#navbar .dropdown{width:200px;cursor:pointer}
+#navbar .navbar-brand{font-size:30px;font-family:'Bad Script'}
+#navbar ul .fa{
+margin-top:12px;border-right:1px solid #bfbfbf;padding-right:15px;
 }
-#navbar .box{border-left:1px solid #bfbfbf;height:70px}
-#navbar .dropdown{cursor:pointer}
-#navbar .dropdown-menu{margin-top:10px;min-width:110px;padding:0px}
-#navbar .dropdown-menu li{text-align:center;padding:6px 0px}
-#navbar .dropdown-menu li:hover{background-color:#ffffcc}
+#navbar .dropdown-menu{opacity:0.9;padding:0px} /*remove padding to change background-color of each li*/
+#navbar .dropdown-menu li{padding:6px 15px;
+}
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
-#navbar img{max-width:22%;border-radius:50%}
-#navbar .col-xs-1{font-size:130%;margin-left:760px;padding-top:20px}
-#navbar .col-xs-2{padding:12px 20px}
-body{overflow-x:hidden}
-#navbar .fa-envelope-o{margin-right:18px}
-#navbar .fa-bars{cursor:pointer}
+#navbar .dropdown-menu li:hover{background-color:#ffffcc}

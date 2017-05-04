@@ -8,65 +8,75 @@
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-<div class="row" id="navbar">
-		<div class="col-xs-2">
-			<span id="project">WASFA</span>
-			<i class="fa fa-bars" aria-hidden="true"></i>
+	<nav class="navbar" id="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<span>WASFA</span>
+				</div>
+				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links">
+					<i class="fa fa-bars"></i>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-right" id="navbar-links">
+				<ul class="nav navbar-nav">
+					<li>
+						<i class="fa fa-bell-o" aria-hidden="true"></i>
+					</li>
+					<li>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					</li>
+					<li class="dropdown text-center" id="dropdown">
+						<span>Admin's Name</span>
+						<span class="caret"></span>
+						<span><%= image_tag('profile.jpg')%></span>
+						<ul class="dropdown-menu" id="admin-menu">
+							<li class="li">Settings</li>
+							<li class="li">Messages</li>
+							<li>logout</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="col-xs-1 box">
-			<i class="fa fa-envelope-o" aria-hidden="true"></i>
-			<i class="fa fa-bell-o" aria-hidden="true"></i>
+	</nav>
+	<!-- sidebar -->
+	<div class="sidenav">
+		<div id="home">
+			<i class="fa fa-home" aria-hidden="true"></i>
+			<a href="/admin">Dashboard</a>
+			<hr>
 		</div>
-
-		<div class="dropdown col-xs-2 box" id="dropdown">
-			<%= image_tag('profile.jpg') %>
-			<span>Admin's Name</span>
-			<span class="caret"></span>
-			<ul class="dropdown-menu" id="admin-menu">
-				<li class="li">Settings</li>
-				<li class="li">Messages</li>
-				<li>logout</li>
-			</ul>
+		<div class="collapsed menu" data-toggle="collapse" data-target="#catlinks">
+			<span>Category</span>
+			<i class="fa fa-chevron-right" aria-hidden="true"></i>
 		</div>
-	</div>
-</div>
-<!-- sidebar -->
-<div class="sidenav">
-	<div id="home">
-		<i class="fa fa-home" aria-hidden="true"></i>
-		<a href="/admin">Dashboard</a>
-		<hr>
-	</div>
-	<div class="collapsed menu" data-toggle="collapse" data-target="#catlinks">
-		<span>Category</span>
-		<i class="fa fa-chevron-right" aria-hidden="true"></i>
-	</div>
-	<ul id="catlinks" class="collapse">
-		<li><%= link_to 'All', admin_categories_path%></li>
-		<li><%= link_to 'New', new_admin_category_path%></li>
-	</ul>
+		<ul id="catlinks" class="collapse">
+			<li><%= link_to 'All', admin_categories_path%></li>
+			<li><%= link_to 'New', new_admin_category_path%></li>
+		</ul>
 
-	<div class="collapsed menu" data-toggle="collapse" data-target="#reclinks">
-		<span>Recipe</span>
-		<i class="fa fa-chevron-right" aria-hidden="true"></i>
-	</div>
-	<ul id="reclinks" class="collapse">
-		<li><%= link_to 'All', admin_food_recipes_path%></li>
-		<li><%= link_to 'New', new_admin_food_recipe_path%></li>
-	</ul>
+		<div class="collapsed menu" data-toggle="collapse" data-target="#reclinks">
+			<span>Recipe</span>
+			<i class="fa fa-chevron-right" aria-hidden="true"></i>
+		</div>
+		<ul id="reclinks" class="collapse">
+			<li><%= link_to 'All', admin_food_recipes_path%></li>
+			<li><%= link_to 'New', new_admin_food_recipe_path%></li>
+		</ul>
 
-	<div class="collapsed menu" data-toggle="collapse" data-target="#sitelinks">
-		<span>My Site</span>
-		<i class="fa fa-chevron-right" aria-hidden="true"></i>
+		<div class="collapsed menu" data-toggle="collapse" data-target="#sitelinks">
+			<span>My Site</span>
+			<i class="fa fa-chevron-right" aria-hidden="true"></i>
+		</div>
+		<ul id="sitelinks" class="collapse">
+			<li><a href="/" target="_blank">Home page</a></li>
+			<li><a href="/categories" target="_blank">Categories</a></li>
+			<li><a href="food_recipes" target="_blank">Recipes</a></li>
+			<li><a href="about" target="_blank">About</a></li>
+			<li><a href="secrets" target="_blank">Kitchen Secrets</a></li>
+		</ul>
 	</div>
-	<ul id="sitelinks" class="collapse">
-		<li><a href="/" target="_blank">Home page</a></li>
-		<li><a href="/categories" target="_blank">Categories</a></li>
-		<li><a href="food_recipes" target="_blank">Recipes</a></li>
-		<li><a href="about" target="_blank">About</a></li>
-		<li><a href="secrets" target="_blank">Kitchen Secrets</a></li>
-	</ul>
-</div>
-<%= yield %>
+	<%= yield %>
 </body>
 </html>

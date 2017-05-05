@@ -8,7 +8,7 @@ class Admin::CategoriesController < ApplicationController
 		@category = Category.new
 	end
 	def create
-		@category = Category.create(category_params)
+		@category = Category.find_or_create_by(category_params)
 		redirect_to admin_categories_path
 	end
 	def edit

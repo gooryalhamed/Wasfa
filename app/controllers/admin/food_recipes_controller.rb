@@ -8,7 +8,7 @@ class Admin::FoodRecipesController < ApplicationController
 		@recipe = FoodRecipe.new
 	end
 	def create
-		@recipe = FoodRecipe.create(recipe_params)
+		@recipe = FoodRecipe.find_or_create_by(recipe_params)
 		redirect_to admin_recipes_path
 	end
 	def edit

@@ -1,7 +1,11 @@
-<div class="container text_center">
+<div class="container wrapper">
+	<div id="title">
+		<span>CATEGORY / FORMS</span>
+		<i class="fa fa-wpforms" aria-hidden="true"></i>
+	</div>
 	<%= form_for(@food_recipe) do |f|%>
 	<div class="row">
-	<div class="col-sm-12" id="field">
+		<div class="col-sm-12" id="field">
 			<%= f.label :name %>
 			<%= f.text_field :name %>
 			<%= f.text_field :origin %>
@@ -11,7 +15,6 @@
 			<%= f.text_field :number_of_persons %>
 			<%= f.text_field :ingredients %>
 			<%= f.text_field :image_url %>
-			
 		</div>
 	</div>
 	<div class="row">

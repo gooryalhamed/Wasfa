@@ -1,12 +1,21 @@
-<div class="row">
-<ul>
-	<% @food_recipes.each do |recipe| %>
-	<li><%= cat.name %>
-		<%= link_to 'Edit', edit_food_recipe_path(recipe) %>
-		<%= link_to 'destroy',recipe,method: :delete, data: {confirm: 'Are you sure?'}  %>
-	</li>
+<div class="container wrapper">
+	<div id="title">
+		<span>RECIPE / ITEMS</span>
+		<%= image_tag('items.png') %>
+	</div>
+	<% @recipes.each do |recipe| %>
+	<div class="row">
+		<div class="col-xs-2"><%= cat.name %></div>
+		<div class="col-xs-4">
+			<%= link_to 'Edit', edit_admin_food_recipe_path(recipe) %>
+			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+			&emsp;&emsp;
+			<%= link_to 'Delete',admin_food_recipe_path(cat), method: :delete, data:{confirm:'Are you sure?'}%>
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
+	</div>
 	<% end %>
-	<a href="/admin">Back to Panel</a>
-</ul>
+	<%= link_to 'New', new_admin_food_recipe_path, {:class=> "btn"} %>
+	<a href="/admin" class="btn">Back to Panel</a>
 </div>
 	

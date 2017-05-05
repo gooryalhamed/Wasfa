@@ -1,17 +1,18 @@
 <div class="container wrapper">
 	<div id="title">
 		<span>CATEGORY / FORMS</span>
-		<i class="fa fa-wpforms" aria-hidden="true"></i>
+		<%= image_tag('interface.png') %>
 	</div>
 	
 	<div id="form-wrapper">
 		<%= form_for([:admin, @category]) do |f|%>
-		<div id="field">
+		<div class="field">
 			<%= f.label :name %>
 			<%= f.text_field :name %>
 		</div>
 		<%= f.submit :class => "btn" %>
 		<% end %>
-		<%= link_to 'Back', admin_categories_path,{:class => "btn"} %>
+		<a href="/admin/categories" class="btn"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back
+		</a>
 	</div>
 </div>

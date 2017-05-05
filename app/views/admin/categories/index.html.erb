@@ -10,11 +10,12 @@
 			<%= link_to 'Edit', edit_admin_category_path(cat) %>
 			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 			&emsp;&emsp;
-			<%= link_to 'Delete',admin_category_path(cat), method: :delete, data:{confirm:'Are you sure?'}%>
+			<%= link_to 'Delete',admin_category_path(cat), method: :delete, data:{confirm:'Are you sure ou want to delete this item?'}%>
 			<i class="fa fa-times" aria-hidden="true"></i>
 		</div>
 	</div>
 	<% end %>
 	<%= link_to 'New', new_admin_category_path, {:class=> "btn"} %>
-	<a href="/admin" class="btn">Back to Panel</a>
+	<a href="/admin" class="btn"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back To Panel
+	</a>
 </div>

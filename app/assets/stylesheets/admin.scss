@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+body{background-color:#f2f2f2;overflow-x: hidden;}
 /*side navbar */
 #sidebar {
     height: 100%; /* 100% Full-height */
@@ -27,7 +28,7 @@ transition:all 0.3s;
     color: #fff;
     cursor:pointer;
 }
-#sidebar span:hover{color:#e6ac00}
+#sidebar span:hover{color:#ffd11a}
 #sidebar .fa-chevron-right{
 color:#fff;padding-top:8px;position:absolute;left:200px
 }
@@ -58,18 +59,20 @@ padding-right:15px;font-size:140%
 }
 /**** new & edit ****/
 .wrapper{margin-left:300px;margin-top:30px;}
-#title{color:#e6ac00;margin-bottom:50px;font-size:22px
+#title{color:#e6ac00;margin-bottom:50px;font-size:24px
 }
 #form-wrapper{
-border:1px solid #bfbfbf;padding:25px;border-radius:4px;width:600px;
+border:1px solid #bfbfbf;padding:25px 60px;border-radius:4px;width:600px;
 font-size:18px;box-shadow:1px 1px 4px #bfbfbf
 }
-#form-wrapper input[type=text]{width:400px;margin-bottom:20px}
+#form-wrapper input[type=text]{
+margin-bottom:20px;font-size:16px;padding:3px 10px
+}
 .wrapper .btn{
 border:1px solid #8080ff;background-color:#8080ff;font-size:14px;
-padding:4px 0px;margin-left:30px;color:#fff;width:130px;
-margin-bottom:10px
+padding:4px 0px;margin-left:30px;color:#fff;width:150px;
+margin-bottom:10px;font-family:sans serif
 }
-body{background-color:#f2f2f2}
+.wrapper label{font-weight:500;font-size:16px}
 /**** index *****/
 .wrapper .row{margin-bottom:30px;margin-left:30px}

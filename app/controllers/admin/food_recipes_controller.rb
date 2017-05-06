@@ -26,7 +26,7 @@ class Admin::FoodRecipesController < ApplicationController
 	end
 	private
 	def recipe_params
-		params.require(:food_recipe).permit(:name, :origin, :preparation_time, :description, :method, :number_of_persons, :image_url, :category_id, :ingredients)
+		params.require(:food_recipe).permit(:name, :origin, :preparation_time, :description, :method, :number_of_persons, :profile_image, :category_id, :ingredients)
 	end
 	def find_recipe
 		@recipe = FoodRecipe.find(params[:id])

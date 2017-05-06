@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 	get 'about', to:'application#about'
 	get 'secrets', to: 'application#secrets'
 	resources :users
-	resources :categories, only:[:index, :show]
+	resources :categories, only:[:show]
 	resources :food_recipes, only:[:index, :show]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

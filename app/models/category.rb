@@ -1,3 +1,3 @@
-class Category < ApplicationRecord
-	has_many :recipes
+class Category < ActiveRecord::Base
+	has_many :food_recipes
 end

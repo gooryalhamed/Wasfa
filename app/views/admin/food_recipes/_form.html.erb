@@ -7,7 +7,7 @@
 		<%= form_for([:admin, @recipe]) do |f|%>
 		<%= f.text_field :name, placeholder:"Name" %>
 		<%= f.text_field :origin, placeholder:"Origin" %>
-		<%= f.collection_select :category, Category.all, :id, :name %>
+		<%= f.collection_select :category_id, Category.all, :id, :name %>
 		<%= f.text_field :preparation_time, placeholder:"Preparation_time" %>
 		<%= f.text_field :description, placeholder:"Description" %>
 		<%= f.text_field :method, placeholder:"Method" %>
@@ -20,3 +20,10 @@
 		</a>
 	</div>
 </div>
+<!--
+<select name="food_recipe[category_id]">
+			<% Category.all.each do |cat| %>
+			<option value="<%= cat.id %>"><%= cat.name %></option>
+			<% end %>
+</select>
+		-->

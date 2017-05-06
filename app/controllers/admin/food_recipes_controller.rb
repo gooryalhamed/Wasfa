@@ -15,7 +15,7 @@ class Admin::FoodRecipesController < ApplicationController
 	end
 	def update
 		if @recipe.update(recipe_params) then
-			redirect_to admin_food_recipes_path
+			redirect_to admin_food_recipe_path(@recipe)
 		end
 	end
 	def destroy

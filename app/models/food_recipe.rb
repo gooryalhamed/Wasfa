@@ -3,5 +3,4 @@ class FoodRecipe < ActiveRecord::Base
 	def category_name
 		self.category.name
 	end
-	attachment :profile_image
 end

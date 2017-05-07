@@ -1,6 +1,6 @@
-<div class="container wrapper">
+<div class="container wrapper" id="show-recipe">
 	<h1><%= @recipe.name %></h1>
-	<%= image_tag attachment_url(@recipe, :profile_image, :fill, 300, 300, format: "jpg") %>
+	<%= image_tag("/uploads/#{@recipe.image}") %>
 	<p>Category:<%= @recipe.category_name %></p>
 	<p>Origin: <%= @recipe.origin %></p>
 	<p>Enough for: <%= @recipe.number_of_persons %></p>
@@ -8,5 +8,5 @@
 	<p>Description: <%= @recipe.description %></p>
 	<p>Ingredients: <%= @recipe.ingredients %></p>
 	<p>Method<%= @recipe.method %></p>
-	<%= link_to 'Back', admin_food_recipes_path %>
+	<%= link_to 'Back', admin_food_recipes_path, {:class=> "btn"} %>
 </div>

@@ -58,7 +58,7 @@ padding-right:15px;font-size:140%
     #navbar #logo{font-size:24px}
 }
 /**** new & edit ****/
-.wrapper{margin-left:300px;margin-top:30px;}
+.wrapper{margin-left:300px;margin-top:30px;font-size:16px}
 #title{color:#e6ac00;margin-bottom:50px;font-size:24px
 }
 #form-wrapper{
@@ -74,5 +74,7 @@ padding:4px 0px;margin-left:30px;color:#fff;width:150px;
 margin-bottom:10px;font-family:sans serif
 }
 .wrapper label{font-weight:500;font-size:16px}
+.wrapper .profile-pic{max-width:300px;max-height:200px}
 /**** index *****/
 .wrapper .row{margin-bottom:30px;margin-left:30px}
+#show-recipe img{max-width:200px; max-height:150px;}

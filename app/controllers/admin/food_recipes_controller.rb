@@ -8,7 +8,13 @@ class Admin::FoodRecipesController < ApplicationController
 		@recipe = FoodRecipe.new
 	end
 	def create
-		@recipe = FoodRecipe.find_or_create_by(recipe_params)
+		@recipe = FoodRecipe.new(recipe_params)
+		uploaded_io = params[:food_recipe][:image]
+		File.open(Rails.root.join('public','uploads',uploaded_io.original_filename), "wb") do |file|
+			file.write(uploaded_io.read)
+		end
+		@recipe.image = uploaded_io.original_filename
+		@recipe.save
 		redirect_to admin_food_recipes_path
 	end
 	def edit
@@ -26,7 +32,7 @@ class Admin::FoodRecipesController < ApplicationController
 	end
 	private
 	def recipe_params
-		params.require(:food_recipe).permit(:name, :origin, :preparation_time, :description, :method, :number_of_persons, :profile_image, :category_id, :ingredients)
+		params.require(:food_recipe).permit(:name, :origin, :preparation_time, :description, :method, :number_of_persons, :image, :category_id, :ingredients)
 	end
 	def find_recipe
 		@recipe = FoodRecipe.find(params[:id])

@@ -13,7 +13,8 @@
 		<%= f.text_field :method, placeholder:"Method" %>
 		<%= f.text_field :number_of_persons, placeholder:"Number_of_persons" %>
 		<%= f.text_field :ingredients, placeholder:"Ingredients" %>
-		<%= form.attachment_field :profile_image %>
+		<%= f.file_field :image %>
+		<br>
 		<%= f.submit :class => "btn" %>
 		<% end %>
 		<a href="/admin/food_recipes" class="btn"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back

@@ -1,20 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body{background-color:#29293d}
-.container{margin-top:150px;margin-left:450px;
-width:400px; border: 1px solid #bfbfbf;background-color:#fff;
-padding:20px 20px
+body{background-color:#111}
+.devise-wrapper span{font-size:50px;}
+.devise-wrapper{
+	margin-top:80px;color:#fff;
 }
-.container h2{
-color:#29293d;font-size:40px;border-bottom:1px solid #808080;
-padding-bottom:15px;margin-bottom:20px;
+.devise-wrapper .input{
+	width:300px;height:40px;border-radius:8px;
+	margin-bottom:20px;background-color:#666666;color:#fff;
+	font-size:16px;padding-left:10px;border:none
 }
-.container input:not([type="checkbox"]){
-	width:240px;
-}
-.container a{color:#004080}
-.container form{margin-bottom:10px}
-.container #user_password_confirmation{margin-bottom:15px}
-.container #error_explanation h2{
-font-size:16px;color:#ff4d4d
-}
+.devise-wrapper .submit{background-color:#ff9900;font-weight:700}
+#title{margin-bottom:20px;}

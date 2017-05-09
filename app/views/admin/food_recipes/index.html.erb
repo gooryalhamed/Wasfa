@@ -12,6 +12,9 @@
 			&emsp;&emsp;
 			<%= link_to 'Delete',admin_food_recipe_path(recipe), method: :delete, data:{confirm:'Are you sure you want to delete this item?'}%>
 			<i class="fa fa-times" aria-hidden="true"></i>
+			&emsp;&emsp;
+			<%= link_to 'view', admin_food_recipe_path(recipe) %>
+			<i class="fa fa-eye" aria-hidden="true"></i>
 		</div>
 	</div>
 	<% end %>

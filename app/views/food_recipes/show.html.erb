@@ -1,0 +1,16 @@
+<div class="recipe-container">
+	<div class="row">
+		<div class="col-sm-6">
+			<%= image_tag("/uploads/#{@recipe.image}") %>
+		</div>
+		<div class="col-sm-6">
+			<h1><%= @recipe.name %></h1>
+			<span><%= @recipe.origin %> <%= @recipe.category_name %></span>
+			<p>Enough for: <%= @recipe.number_of_persons %></p>
+			<p>Time required for preparation: <%= @recipe.preparation_time %></p>
+			<p>Description: <%= @recipe.description %></p>
+			<h3>Ingredients:</h3><p><%= @recipe.ingredients %></p>
+			<h3>Directions:</h3><p><%= @recipe.method %></p>
+		</div>
+	</div>
+</div>

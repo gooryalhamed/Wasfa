@@ -1,9 +1,0 @@
-<ul>
-	<% @categories.each do |cat| %>
-	<li><%= cat.name %>
-		<%= link_to 'Edit', category_path(cat) %>
-		<%= link_to 'Delete',cat, method: :delete, confirm: 'Are you sure?' %>
-	</li>
-	<% end %>
-</ul>
-</div>

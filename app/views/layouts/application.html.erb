@@ -3,9 +3,9 @@
 <head>
 	<title>Wasfa</title>
 	<%= csrf_meta_tags %>
-	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'true' %>
 	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Caveat|Josefin+Sans" rel="stylesheet">
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	
 </head>
 <body>
 	<div class="container">
@@ -35,14 +35,17 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-links">
 					<ul class="nav navbar-nav">
-					<li><%= link_to 'Home', root_path %></li>
+						<li><%= link_to 'Home', root_path %></li>
 						<li class="dropdown">
 							<a href="categories">Categories
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<% Category.all.each do |cat| %>
-								<li><a><%= cat.name %></a></li>
+								<li>
+									<a href="/categories/<%= cat.id%>" target="_blank"><%= cat.name %>
+									</a>
+								</li>
 								<% end %>
 							</ul>
 						</li>
@@ -62,5 +65,6 @@
 			</div>
 		</div>
 	</footer>
+	<%= javascript_include_tag 'application' %>
 </body>
 </html>

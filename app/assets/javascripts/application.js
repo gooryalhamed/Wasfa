@@ -2,11 +2,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-$(document).ready(function(){
-	AdminList()
-	showSidebar()
-})
-
+AdminList();
+showSidebar();
 function AdminList(){
 	var menu = $('#navbar .dropdown')
 	$(document).on('click',function(event){
@@ -35,4 +32,5 @@ function showSidebar(){
 
 	})
 }
+
 

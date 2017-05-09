@@ -3,9 +3,8 @@
 <head>
 	<title>Admin Dashboard</title>
 	<%= csrf_meta_tags %>
-	<%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'true' %>
 	<link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
-	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 	<nav class="navbar" id="navbar">
@@ -72,5 +71,6 @@
 		</ul>
 	</div>
 	<%= yield %>
+	<%= javascript_include_tag 'application' %>
 </body>
 </html>

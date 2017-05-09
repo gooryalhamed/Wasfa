@@ -1,38 +1,39 @@
-<div class="devise-wrapper container">
-	<div id="title">
-		<%= image_tag('unlock.png') %>
-		<span>Login</span>
+<div id="title">
+	<%= image_tag('unlock.png') %>
+	<span>Login</span>
+</div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="row">
+	<div class="col-xs-12">
+		<%= f.text_field :username,placeholder:"Username", :class=>"input" %>
 	</div>
-	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-	<div class="row">
-		<div class="col-xs-12">
-			<%= f.text_field :username,placeholder:"Username", :class=>"input" %>
-		</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<%= f.email_field :email,placeholder:"E-Mail", :class=>"input" %>
 	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<%= f.email_field :email,placeholder:"E-Mail", :class=>"input" %>
-		</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<%= f.password_field :password, autocomplete: "off",placeholder:"Password",:class=>"input" %>
 	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<%= f.password_field :password, autocomplete: "off",placeholder:"Password",:class=>"input" %>
-		</div>
-	</div>
+</div>
 
-	<% if devise_mapping.rememberable? -%>
-	<div class="row">
-		<div class="col-xs-12">
-			<%= f.label :remember_me %>
-			<%= f.check_box :remember_me %>
-		</div>
+<% if devise_mapping.rememberable? -%>
+<div class="row">
+	<div class="col-xs-12">
+		<%= f.label :remember_me %>
+		<%= f.check_box :remember_me %>
 	</div>
-	<% end -%>
-	<div class="row">
-		<div class="col-xs-12">
-			<%= f.submit "Log in",:class=>"input submit" %>
-		</div>
+</div>
+<% end -%>
+<div class="row">
+	<div class="col-xs-12">
+		<%= f.submit "Log in",:class=>"input submit" %>
 	</div>
-	<% end %>
+</div>
+<% end %>
+<div id="links">
+	<%= render "devise/shared/links" %>
 </div>
 

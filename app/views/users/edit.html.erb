@@ -8,13 +8,22 @@
 	
 </head>
 <body>
+	<nav class="row" id="upper-nav">
+		<div class="col-xs-6" id="logo">
+			<h1>Wasfa</h1>
+			<%= image_tag('Soup-icon.png') %>
+		</div>
+		<div class="col-xs-4">
+			<p class="notice"><%= notice %></p>
+		</div>
+	</nav>
+	<!-- header -->
 	<div class="container profile">
-	<%= notice %>
-		<!-- header -->
 		<header>
 			<div class="row">
 				<div class="col-xs-12">
-					<h2>Account Settings</h2>
+					<i class="fa fa-cog" aria-hidden="true" id="gear"></i>
+					<span>Account Settings</span>
 				</div>
 			</div>
 			<div class="row">

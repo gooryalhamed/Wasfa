@@ -4,19 +4,25 @@
 	<title>Wasfa</title>
 	<%= csrf_meta_tags %>
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'true' %>
-	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Caveat|Josefin+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand|Caveat|Josefin+Sans" rel="stylesheet">
 	
 </head>
 <body>
 	<div class="container">
 		<nav class="row" id="upper-nav">
 			<div class="col-xs-8" id="logo">
-				<h1>Wasfa</h1>
-				<%= image_tag('Soup-icon.png') %>
+				<div class="row">
+				<div class="col-xs-2">
+						<span>Wasfa</span>
+					</div>
+					<div class="col-xs-1">
+						<%= image_tag('broth.png') %>
+					</div>
+				</div>
 			</div>
 			<div class="col-xs-4" id="user">
 				<% if user_signed_in? %>
-				<strong><%= current_user.username %></strong>
+				<%= current_user.username %>
 				<i class="fa fa-cog" aria-hidden="true" id="gear"></i>
 				<ul class="dropdown-menu" id="settings">
 					<li><%= link_to "My Profile", edit_user_path(current_user) %></li>

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 	def update
 		if current_user.update(user_params)
 			redirect_to edit_user_path(current_user)
-			flash[:notice] = "Your username was successfully updated"
+			flash[:notice] = "Your information were successfully updated"
 		end
 	end
 	private

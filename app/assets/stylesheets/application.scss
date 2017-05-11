@@ -2,28 +2,25 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-#upper-nav h1{
-font-size:40px;color:#132639;font-family:'Eagle Lake';margin-top:25px;
-}
+
+body{background-image:url('background1.jpg');color:#fff}
 #upper-nav #user{padding-top:50px;text-align:right}
 #settings{margin-left:230px}
 #upper-nav a{color:#29293d}
-#upper-nav span{color:#ffcc00;font-size:20px;font-weight:700}
-#upper-nav #logo{padding-left:40px}
-#upper-nav img{
-max-width:4%;position:absolute;left:186px;top:30px;
-}
+#upper-nav span{color:#fff;font-size:40px;font-family:'Quicksand'}
+img{display: inline-block;margin-top: 15px;}
+#logo{padding-top:20px}
 /*lower nav */
 #lower-nav{
-margin:0px auto;width:1140px;border-top:1px solid #808080;
-border-bottom:1px solid #808080;border-radius:0;background-color:#fff;
+border-top:1px solid #808080;
+border-bottom:1px solid #808080;border-radius:0;
 }
 #lower-nav .nav li a{
-font-size:16px;letter-spacing:1px;color:#666666;margin-right:10px;
+font-size:16px;letter-spacing:1px;color:#ffffe6;margin-right:10px;
 border-bottom:3px solid #fff;transition:all 0.3s;
 }
 #lower-nav .nav li a:hover{
-background-color:#fff;border-bottom-color:#ffcc00;
+background-color:#ffffe6;border-bottom-color:#ffcc00;color:#202020
 }
 #lower-nav .dropdown-menu li a{
 color:#202020;cursor:pointer
@@ -39,15 +36,23 @@ color:#29293d;border-color:#29293d;background-color:#fff
 }
 /*footer*/
 footer{
-margin-top:100px;bottom:0;border:1px dotted #808080;
-padding:8px;font-family:sans;font-size:14px;
-}
+margin-top:100px;bottom:0;border-top:1px dotted #808080;
+padding:8px;font-family:sans;font-size:14px;}
 /* header */
-header img{max-width:100%}
-header h1{font-size:60px;font-family:'Josefin Sans';color:#715540;}
+#first-row{
+height:550px;background-image:url('recipe.jpg');
+background-size:cover;padding:150px 300px;color:#303030
+}
+#first-row h1{font-size:60px;}
+#first-row h1+p{font-size:20px}
+#first-row .fa{cursor:pointer}
+#text{
+border:1px solid #bfbfbf;background-color:#fff;opacity:0.8;
+text-align:center
+}
+
 header .heading{margin-bottom:20px;margin-top:80px}
 header .box{border:1px solid #808080;height:200px;}
-.carousel-control{padding-top:170px}
 /***** site ****/
 .catRecipes-container{;margin-top:40px;position:relative}
 .image {
@@ -80,8 +85,19 @@ header .box{border:1px solid #808080;height:200px;}
 .profile header{margin-top:50px;padding-left:100px;
 font-size:18px
 }
-.profile h2{margin-left:80px;}
+.profile span{font-size:30px}
+.profile #gear{font-size:30px}
+.profile input[type=submit]{
+background-color:#ff944d;color:#fff;border:1px solid #ff944d
+}
 .profile #text{margin-top:20px}
 .profile hr{border-color:#bfbfbf}
 .profile .fa{cursor:pointer}
 .profile input{padding-left:10px}
+nav .notice{color:#47d147;margin-top:30px;font-size:16px;
+animation:notice 3s forwards;opacity:1
+}
+@keyframes notice{
+  0%{opacity:1}
+  100%{opacity:0}
+}

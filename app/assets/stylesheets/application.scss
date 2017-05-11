@@ -10,7 +10,8 @@ body{background-image:url('background1.jpg');color:#fff}
 #upper-nav span{color:#fff;font-size:40px;font-family:'Quicksand'}
 img{display: inline-block;margin-top: 15px;}
 #logo{padding-top:20px}
-/*lower nav */
+
+/***** lower nav *****/
 #lower-nav{
 border-top:1px solid #808080;
 border-bottom:1px solid #808080;border-radius:0;
@@ -25,6 +26,9 @@ background-color:#ffffe6;border-bottom-color:#ffcc00;color:#202020
 #lower-nav .dropdown-menu li a{
 color:#202020;cursor:pointer
 }
+#social{margin-top:20px;text-align:right}
+#social li a{color:#ffffe6;font-size:16px}
+#social li a:hover{color:#ffcc00}
 .dropdown:hover .dropdown-menu {
 display: block;
 }
@@ -48,7 +52,7 @@ background-size:cover;padding:150px 300px;color:#303030
 #first-row .fa{cursor:pointer}
 #text{
 border:1px solid #bfbfbf;background-color:#fff;opacity:0.8;
-text-align:center
+text-align:center;padding-bottom:10px
 }
 
 header .heading{margin-bottom:20px;margin-top:80px}
@@ -101,3 +105,8 @@ animation:notice 3s forwards;opacity:1
   0%{opacity:1}
   100%{opacity:0}
 }
+/*** search bar ****/
+#text input[type="text"]{border:1px solid #808080;padding:3px 10px;
+border-radius:8px;width:100px;transition:all 0.3s
+}
+#text input:focus{width:170px}

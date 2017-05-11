@@ -5,7 +5,9 @@
 
 body{background-image:url('background1.jpg');color:#fff}
 #upper-nav #user{padding-top:50px;text-align:right}
-#settings{margin-left:230px}
+#settings{margin-left:230px;padding:0px;}
+#settings li a{padding-top:8px}
+#settings li a:hover{background-color:#ffe680}
 #upper-nav a{color:#29293d}
 #upper-nav span{color:#fff;font-size:40px;font-family:'Quicksand'}
 img{display: inline-block;margin-top: 15px;}

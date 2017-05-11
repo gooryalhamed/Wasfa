@@ -1,0 +1,14 @@
+<div class="container catRecipes-container">
+	<div class="row">
+		<% FoodRecipe.all.each do |rec| %>
+		<div class="col-sm-4 col-xs-6 item">
+			<%= image_tag("/uploads/#{rec.image}", :class=>"image") %>
+			<div class="middle">
+				<%= link_to 'View', food_recipe_path(rec),{:class=> "text"} %>
+			</div>
+			<h4><%= rec.name %></h4>
+			<p><%= rec.description %></p>
+		</div>
+		<% end %>
+	</div>
+</div>

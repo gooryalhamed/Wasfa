@@ -16,10 +16,11 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-3 box"></div>
-		<div class="col-sm-3 box"></div>
-		<div class="col-sm-3 box"></div>
-		<div class="col-sm-3 box"></div>
+		<% FoodRecipe.order(created_at: :desc).each do |rec| %>
+		<div class="col-sm-3 box">
+			<%= image_tag("/uploads/#{rec.image}", :class=>"image") %>
+		</div>
+		<% end %>
 	</div>
 	<div class="row">
 		<div class="col-xs-12 text-center">

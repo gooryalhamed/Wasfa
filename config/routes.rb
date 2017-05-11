@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 	namespace :admin do
 		resources :categories
 		resources :food_recipes
+		resources :users, only: [:index]
+		root to: 'users#controlPanel'
 	end
-	get 'admin', to: 'admin#control_panel'
 	get 'about', to:'application#about'
 	get 'secrets', to: 'application#secrets'
-	resources :users
 	resources :categories, only:[:show]
 	resources :food_recipes, only:[:index, :show]
+	resources :users, only: [:edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -13,6 +13,9 @@
 				<span id="logo">WASFA</span>
 				<i class="fa fa-bars"></i>
 			</div>
+			<div class="notice">
+				<%= flash[:admin] %>
+			</div>
 			<div class="navbar-right">
 				<ul class="nav navbar-nav">
 					<li class="icon">
@@ -25,7 +28,7 @@
 						<span><%= image_tag('profile.jpg')%></span>
 						<ul class="dropdown-menu" id="admin-menu">
 							<li class="li">Settings</li>
-							<li class="li">Messages</li>
+							<li class="li">Profile</li>
 							<li>logout</li>
 						</ul>
 					</li>

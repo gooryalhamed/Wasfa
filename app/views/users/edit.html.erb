@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wasfa</title>
+	<%= csrf_meta_tags %>
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'true' %>
+	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Caveat|Josefin+Sans" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="container profile">
+	<%= notice %>
+		<!-- header -->
+		<header>
+			<div class="row">
+				<div class="col-xs-12">
+					<h2>Account Settings</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<hr>
+				</div>
+			</div>
+			<div class="row" id="text">
+				<div class="col-xs-2">
+					<p id="name">User Name</p> 
+				</div>
+				<div class="col-xs-4">
+					<%= form_for(current_user) do |f| %>
+					<%= f.text_field :username, {:readonly=> true} %>
+					<%= f.submit "update" %>
+					<% end %>
+				</div>
+				<div class="col-xs-1">
+					<i class="fa fa-pencil edit-username" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="row" id="text">
+				<div class="col-xs-2">
+					<p>Contact</p> 
+				</div>
+				<div class="col-xs-4">
+					<%= form_for(current_user) do |f| %>
+					<%= f.text_field :email, {:readonly=> true} %>
+					<%= f.submit "update" %>
+					<% end %>
+				</div>
+				<div class="col-xs-1">
+					<i class="fa fa-pencil edit-email" aria-hidden="true"></i>
+				</div>
+			</div>
+		</header>
+	</div>
+	<%= javascript_include_tag 'users' %>
+</body>
+</html>

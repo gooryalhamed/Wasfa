@@ -1,0 +1,6 @@
+<div class="row">
+	<%= @myusers.all.each do |u| %>
+		<%= u.username %>
+		<%= u.email %>
+	<% end %>
+</div>

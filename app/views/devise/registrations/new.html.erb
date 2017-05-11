@@ -14,7 +14,6 @@
     <%= f.email_field :email,placeholder:"E-Mail",:class=>"input" %>
   </div>
 </div>
-
 <% if @minimum_password_length %>
 <em>(<%= @minimum_password_length %> characters minimum)</em>
 <% end %><br />
@@ -28,7 +27,6 @@
     <%= f.password_field :password_confirmation,placeholder:"Password Confirmation", autocomplete: "off",:class=>"input" %>
   </div>
 </div>
-
 <div class="row">
   <div class="col-xs-12">
     <%= f.submit "Sign up",:class=>"input submit" %>

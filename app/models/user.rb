@@ -14,4 +14,12 @@ class User < ApplicationRecord
   		user.password = Devise.friendly_token[0,20]
   	end
   end
+  enum role: [:normal,:admin]
+  after_initialize :set_default_role, :if => :new_record?
+  def set_default_role 
+    self.role ||= :normal
+  end
+  def guest?
+    persisted?
+  end
 end

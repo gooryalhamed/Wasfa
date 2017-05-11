@@ -2,8 +2,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-AdminList();
-showSidebar();
+$(document).ready(function(){
+	AdminList();
+	showSidebar();
+	userSettings()
+})
+
 function AdminList(){
 	var menu = $('#navbar .dropdown')
 	$(document).on('click',function(event){
@@ -30,6 +34,16 @@ function showSidebar(){
 			document.getElementById("sidebar").style.display = "none";
 		}
 
+	})
+}
+function userSettings(){
+	$('.container .fa-cog').click(function(){
+		if (document.getElementById("settings").style.display == "none"){
+			document.getElementById("settings").style.display = "block";
+		}
+		else{
+			document.getElementById("settings").style.display = "none";
+		}
 	})
 }
 

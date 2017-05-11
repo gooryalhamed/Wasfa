@@ -20,7 +20,7 @@ body{background-color:#f2f2f2;overflow-x: hidden;}
 font-size:16px;display:block;color:#fff;border-bottom:2px solid #111;
 transition:all 0.3s;
 }
-#sidebar ul li a:hover{border-bottom-color:#fff}
+#sidebar ul li a:hover{border-bottom-color:#00cc44}
 #sidebar a,#sidebara:hover{text-decoration:none}
 #sidebar span{
 	padding:8px 40px;
@@ -28,7 +28,7 @@ transition:all 0.3s;
     color: #fff;
     cursor:pointer;
 }
-#sidebar span:hover{color:#ffd11a}
+#sidebar span:hover{color:#00cc44}
 #sidebar .fa-chevron-right{
 color:#fff;padding-top:8px;position:absolute;left:200px
 }
@@ -37,7 +37,7 @@ color:#fff;padding-top:8px;position:absolute;left:200px
 #sidebar ul li{padding:8px 60px}
 /**** navigation bar ****/
 #navbar{padding:12px 0px;border-bottom:1px solid #bfbfbf;background-color:#fff}
-#navbar #logo{font-size:30px;font-family:'Bad Script';margin-top:6px}
+#navbar #logo{font-size:30px;font-family:'Bad Script';margin-top:6px;color:#00cc44}
 #navbar img{max-width:20%;border-radius:50%}
 #navbar .navbar-nav{margin-top:6px}
 #navbar .dropdown{width:200px;cursor:pointer}
@@ -46,11 +46,19 @@ height:40px;border-right:1px solid #bfbfbf;margin-top:8px;
 padding-right:15px;font-size:140%
 }
 #navbar .fa-bell-o{margin-right:16px}
-#navbar .fa-bars{cursor:pointer;margin-left:8px}
+#navbar .fa-bars{cursor:pointer;margin-left:8px;}
 #navbar .dropdown-menu li{padding:6px 15px}
 #navbar .dropdown-menu .li{border-bottom:1px solid #bfbfbf}
-#navbar .dropdown-menu li:hover{background-color:#ffe699}
+#navbar .dropdown-menu li:hover{background-color:#66ff99}
 #navbar .dropdown-menu{padding:0px;margin-right:20px} /*remove padding to change background-color of each li*/
+
+/*** control panel ****/
+.box{
+border:1px solid #ccc;padding-top:20px;
+;width:200px;background-color:#fff;margin-right:20px
+}
+.box hr{border-color:#ccc}
+.box .num{color:#00cc44}
 
 /**** responsive stie *****/
 @media(max-width:768px){
@@ -58,7 +66,7 @@ padding-right:15px;font-size:140%
     #navbar #logo{font-size:24px}
 }
 /**** new & edit ****/
-.wrapper{margin-left:300px;margin-top:30px;font-size:16px}
+.wrapper{margin-left:270px;margin-top:50px;font-size:16px}
 #title{color:#e6ac00;margin-bottom:50px;font-size:24px
 }
 #form-wrapper{

@@ -117,3 +117,10 @@ animation:notice 3s forwards;opacity:1
 border-radius:8px;width:100px;transition:all 0.3s
 }
 #text input:focus{width:170px}
+/*** search page ****/
+#search-container{
+margin-left:100px;background-color:#fff;color:#202020;
+width:900px;padding:20px 100px;
+}
+#search-container img{max-width:100%}
+#recName {padding-top:50px;font-size:16px;}

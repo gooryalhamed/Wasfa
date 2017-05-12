@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	def secrets
 	end
 	def search
-		@result = FoodRecipe.search(params[:search_keywords])
+		@results = FoodRecipe.search(params[:search_keywords])
 	end
 	protected
 	def configure_permitted_parameters

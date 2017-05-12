@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
 	end
 	def secrets
 	end
+	def search
+		@result = FoodRecipe.search(params[:search_keywords])
+	end
 	protected
 	def configure_permitted_parameters
 		devise_parameter_sanitizer.permit(:sign_up, keys: [:username])

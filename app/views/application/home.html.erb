@@ -17,8 +17,9 @@
 	</div>
 	<div class="row">
 		<% FoodRecipe.order(created_at: :desc).each do |rec| %>
-		<div class="col-sm-3 box">
+		<div class="col-sm-3 box text-center">
 			<%= image_tag("/uploads/#{rec.image}", :class=>"image") %>
+			<p><%= link_to "#{rec.name}",food_recipe_path(rec) %></p>
 		</div>
 		<% end %>
 	</div>

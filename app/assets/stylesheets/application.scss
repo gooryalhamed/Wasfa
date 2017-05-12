@@ -59,7 +59,11 @@ text-align:center;padding-bottom:10px
 }
 
 header .heading{margin-bottom:20px;margin-top:80px}
-header .box{border:1px solid #808080;height:230px;padding-top:5px}
+header .box{border:1px solid #808080;height:260px;padding-top:5px;
+background-color:#ffffe6;
+}
+header .box p{font-size:16px;margin-top:14px}
+header .box p a{color:#303030}
 /***** site ****/
 .catRecipes-container{;margin-top:40px;position:relative}
 .image {

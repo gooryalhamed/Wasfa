@@ -1,0 +1,5 @@
+class RemoveNumFromLikes < ActiveRecord::Migration[5.0]
+  def change
+    remove_column :likes, :num, :integer
+  end
+end

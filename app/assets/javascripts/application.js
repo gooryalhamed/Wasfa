@@ -3,6 +3,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 userSettings()
+submitLike()
 function userSettings(){
 	var settlist = $('.container .fa-cog')
 	$(document).on('click',function(event){
@@ -12,6 +13,11 @@ function userSettings(){
 	})
 	settlist.click(function(){
 		document.getElementById("settings").style.display = "block";
+	})
+}
+function submitLike(){
+	$('#recipe-imgs .like-btn').click(function(){
+		$('.edit_food_recipe').submit();
 	})
 }
 

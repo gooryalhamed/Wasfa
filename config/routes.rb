@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 	get 'about', to:'application#about'
 	get 'secrets', to: 'application#secrets'
 	resources :categories, only:[:show]
-	resources :food_recipes, only:[:index, :show]
+	resources :food_recipes, only:[:index, :show, :update]
 	resources :users, only: [:edit, :update]
 	get'/search', to:"application#search"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

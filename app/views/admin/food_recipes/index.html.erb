@@ -4,7 +4,7 @@
 </div>
 <% @recipes.each do |recipe| %>
 <div class="row">
-	<div class="col-xs-2"><%= recipe.name %></div>
+	<div class="col-xs-3"><%= recipe.name %></div>
 	<div class="col-xs-4">
 		<%= link_to 'Edit', edit_admin_food_recipe_path(recipe) %>
 		<i class="fa fa-pencil-square-o" aria-hidden="true"></i>

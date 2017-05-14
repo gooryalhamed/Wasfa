@@ -7,6 +7,7 @@
 	<p>Time required for preparation:<%= @recipe.preparation_time %></p>
 	<p>Description: <%= @recipe.description %></p>
 	<p>Ingredients: <%= @recipe.ingredients %></p>
+	<p>Likes: <%= @recipe.numof_likes %></p>
 	<p>Method<%= @recipe.method %></p>
 	<%= link_to 'Back', admin_food_recipes_path, {:class=> "btn"} %>
 </div>

@@ -102,6 +102,16 @@ border:1px solid #bfbfbf;padding:10px 40px;background-color:#ffffe6
 cursor:pointer;font-size:130%;
 }
 #recipe-interact .fa:hover{color:#006699}
+#new_comment{
+  margin-top:20px;
+}
+#new_comment input[type=text]{padding:4px 8px;height:50px;width:300px
+}
+#new_comment input[type=submit]{background-color:#404040;color:#fff;border:1px solid #404040;border-radius:4px;margin-left:10px;padding:2px 16px}
+#curren-user-name{background-color:#404040;color:#fff;margin-top:20px;
+height:50px;text-align:center;padding-top:15px
+}
+#newcomm-frm{padding-left:0}
 /**** profile ***/
 .profile header{margin-top:50px;padding-left:100px;
 font-size:18px

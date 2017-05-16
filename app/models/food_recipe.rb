@@ -2,6 +2,8 @@ class FoodRecipe < ActiveRecord::Base
 	belongs_to :category
 	has_many :likes
 	has_many :users, :through => :likes
+	has_many :comments
+	has_many :users, :through => :comments
 	def category_name
 		self.category.name
 	end

@@ -4,15 +4,34 @@
 			<div class="row">
 				<%= image_tag("/uploads/#{@recipe.image}") %>
 			</div>
-			<div id="recipe-imgs" class="row">
-				<%= form_for @recipe, remote: true do |f| %>
+			<div class="row" id="recipe-interact">
+				<div class="col-xs-6">
+					<%= form_for @recipe, remote: true do |f| %>
 					<%= f.submit %>
+					<% end %>
+					<% if current_user.try(:did_like) %>
+					<i class="fa fa-thumbs-o-up liked" id="like-btn"></i>
+					<% else %>
+					<i class="fa fa-thumbs-o-up" id="like-btn" aria-hidden="true"></i>
+					<% end %>
+					<span id="likes-div">
+						<%= @recipe.numof_likes %>
+					</span>people like this
+				</div>
+				<div class="col-xs-6" id="comments-div">
+					<%= @recipe.numof_comments %> Comments
+				</div>
+			</div>
+
+			<div class="row">
+				<%= form_for([@recipe,@recipe.comments.build], remote: true) do |f| %>
+				<%= f.text_field :content, :placeholder=> "write a comment"%>
+				<%= f.hidden_field :food_recipe_id, :value => @recipe.id %>
+				<%= f.hidden_field :user_id, :value => current_user.id %>
+				<%= f.submit "post" %>
 				<% end %>
-				<%= image_tag('like.png', :class=> "like-btn") %>
 			</div>
-			<div class="row" id="likes-div">
-				<%= @recipe.numof_likes %>
-			</div>
+			<div class="row" id="recipe-comments"></div>
 		</div>
 		<div class="col-sm-6">
 			<h1><%= @recipe.name %></h1>

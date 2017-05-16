@@ -3,6 +3,24 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 editProfile()
+userSettings()
+submitLike()
+function userSettings(){
+	var settlist = $('.container .fa-cog')
+	$(document).on('click',function(event){
+		if(event.target.id != "gear"){
+			document.getElementById("settings").style.display = "none";
+		}
+	})
+	settlist.click(function(){
+		document.getElementById("settings").style.display = "block";
+	})
+}
+function submitLike(){
+	$('#like-btn').click(function(){
+		$('.edit_food_recipe').submit();
+	})
+}
 function editProfile(){
 	$('.profile .edit-username').click(function(){
 		document.getElementById("user_username").readOnly = false;

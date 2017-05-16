@@ -5,16 +5,18 @@ class FoodRecipesController < ApplicationController
 	def show
 	end
 	def update
-		if !current_user.did_like
-			current_user.update(:did_like=>true)
-			@recipe.update(:numof_likes=>@recipe.numof_likes+1)
-		else
-			current_user.update(:did_like=>false)
-			@recipe.update(:numof_likes=>@recipe.numof_likes-1)
-		end
-		respond_to do |format|
-			format.html {redirect_to @recipe}
-			format.js
+		if user_signed_in? then
+			if !current_user.did_like
+				current_user.update(:did_like=>true)
+				@recipe.update(:numof_likes=>@recipe.numof_likes+1)
+			else
+				current_user.update(:did_like=>false)
+				@recipe.update(:numof_likes=>@recipe.numof_likes-1)
+			end
+			respond_to do |format|
+				format.html {redirect_to @recipe}
+				format.js
+			end
 		end
 	end
 

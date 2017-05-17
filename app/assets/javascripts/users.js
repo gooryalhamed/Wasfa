@@ -6,7 +6,7 @@ editProfile()
 userSettings()
 submitLike()
 function userSettings(){
-	var settlist = $('.container .fa-cog')
+	var settlist = $('#gear')
 	$(document).on('click',function(event){
 		if(event.target.id != "gear"){
 			document.getElementById("settings").style.display = "none";

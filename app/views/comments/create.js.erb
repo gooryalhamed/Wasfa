@@ -1,1 +1,3 @@
-$('#recipe-comments').append('<%= @comment.content %>')
+$('#recipe-comments').append('<%= @comment.content %>');
+$('#comment_content').val("");
+$('#recipe-comments h4').text('<%= @recipe.numof_comments %> Comments');

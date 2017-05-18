@@ -6,11 +6,11 @@ class FoodRecipesController < ApplicationController
 	end
 	def update
 		if user_signed_in? then
-			if !current_user.did_like
-				current_user.update(:did_like=>true)
+			if !current_user.did_like(@recipe)
+				like = Like.create(:user_id=>current_user.id,:food_recipe_id=>@recipe.id)
 				@recipe.update(:numof_likes=>@recipe.numof_likes+1)
 			else
-				current_user.update(:did_like=>false)
+				Like.where("food_recipe_id =? && user_id = ?", recipe.id, current_user.id).destroy
 				@recipe.update(:numof_likes=>@recipe.numof_likes-1)
 			end
 			respond_to do |format|
@@ -23,5 +23,12 @@ class FoodRecipesController < ApplicationController
 	private
 	def find_recipe
 		@recipe = FoodRecipe.find(params[:id])	
+	end
+	def did_like
+		if Like.where("food_recipe_id =? && user_id = ?", recipe.id, current_user.id)
+			return true
+		else
+			return false
+		end
 	end
 end

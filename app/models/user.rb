@@ -15,9 +15,9 @@ class User < ApplicationRecord
   		user.provider = auth.provider
   		user.uid = auth.uid
       user.username = auth.info.name
-  		user.email = auth.info.email
-  		user.password = Devise.friendly_token[0,20]
-  	end
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+    end
   end
   enum role: [:normal,:admin]
   after_initialize :set_default_role, :if => :new_record?

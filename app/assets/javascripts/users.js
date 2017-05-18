@@ -7,13 +7,14 @@ userSettings()
 submitLike()
 function userSettings(){
 	var settlist = $('#gear')
+	var settings = document.getElementById("settings")
 	$(document).on('click',function(event){
 		if(event.target.id != "gear"){
-			document.getElementById("settings").style.display = "none";
+			settings.style.display = "none";
 		}
 	})
 	settlist.click(function(){
-		document.getElementById("settings").style.display = "block";
+		settings.style.display = "block";
 	})
 }
 function submitLike(){

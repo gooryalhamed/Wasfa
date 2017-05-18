@@ -39,8 +39,7 @@
 				<% @recipe.comments.each do |comment| %>
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
-					<span id="user-img"><%= image_tag('profile.png') %></span>
-
+					<span id="img-user"><%= image_tag('profile.png') %></span>
 					<%= comment.content %>
 					<% if comment.user_id == current_user.try(:id) %>
 					<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">Edit</a>

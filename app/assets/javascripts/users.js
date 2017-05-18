@@ -2,9 +2,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-editProfile()
 userSettings()
 submitLike()
+editProfile()
 function userSettings(){
 	var settlist = $('#gear')
 	var settings = document.getElementById("settings")

@@ -4,22 +4,22 @@
 			<div class="row">
 				<%= image_tag("/uploads/#{@recipe.image}") %>
 			</div>
-			<div class="row" id="recipe-interact">
-				<div class="row">
-					<div class="col-xs-12">
-						<%= form_for @recipe, remote: true do |f| %>
-						<%= f.submit %>
-						<% end %>
-						<% if current_user.try(:did_like) %>
-						<i class="fa fa-thumbs-o-up liked" id="like-btn"></i>
-						<% else %>
-						<i class="fa fa-thumbs-o-up" id="like-btn" aria-hidden="true"></i>
-						<% end %>
-						<span id="likes-div">
-							<%= @recipe.numof_likes %>
-						</span>people like this
-					</div>
+			<div class = "row" id="recipe-interact">
+				<div class="col-xs-12">
+					<%= form_for @recipe, remote: true do |f| %>
+					<%= f.submit %>
+					<% end %>
+					<% if current_user.try(:did_like) %>
+					<i class="fa fa-thumbs-o-up liked" id="like-btn"></i>
+					<% else %>
+					<i class="fa fa-thumbs-o-up" id="like-btn" aria-hidden="true"></i>
+					<% end %>
+					<span id="likes-div">
+						<%= @recipe.numof_likes %>
+					</span> people like this
 				</div>
+
+				<% if current_user %>
 				<div class="row">
 					<div class="col-xs-2" id="curren-user-name">
 						<span><%= current_user.try(:username) %></span>
@@ -33,29 +33,38 @@
 						<% end %>
 					</div>
 				</div>
-				<div class="row" id="recipe-comments">
-					<h4><%= @recipe.numof_comments %> Comments</h4>
-					<% @recipe.comments.each do |comment| %>
-					<p id="<%= comment.id %>"><%= comment.content %>
-						<% if comment.id && comment.user_id == current_user.id %>
-						<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">Edit</a>
-						<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>" data-method="delete" data-remote="true">Delete</a></p>
-						<% end %>
-						<% end %>
-					</div>
-				</div>
+				<% end %>
 			</div>
-			<div class="col-sm-6">
-				<h1><%= @recipe.name %></h1>
-				<span><%= @recipe.origin %> <%= @recipe.category_name %></span>
-				<p>Enough for: <%= @recipe.number_of_persons %></p>
-				<p>Time required for preparation: <%= @recipe.preparation_time %></p>
-				<p>Description: <%= @recipe.description %></p>
-				<h3>Ingredients:</h3><p><%= @recipe.ingredients %></p>
-				<h3>Directions:</h3><p><%= @recipe.method %></p>
+			<div class="row">
+				<h4><%= @recipe.numof_comments %> Comments</h4>
+			</div>
+			<div class="row" id="recipe-comments">
+				<% @recipe.comments.each do |comment| %>
+				<% if comment.id %>
+				<p id="<%= comment.id %>">
+					<span id="user-img"><%= image_tag('profile.png') %></span>
+
+					<%= comment.content %>
+					<% if comment.user_id == current_user.try(:id) %>
+					<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">Edit</a>
+					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>" data-method="delete" data-remote="true">Delete</a>
+				</p>
+				<% end %>
+				<% end %> <!-- if comment.id -->
+				<% end %> <!-- do block -->
 			</div>
 		</div>
+		<div class="col-sm-6">
+			<h1><%= @recipe.name %></h1>
+			<span><%= @recipe.origin %> <%= @recipe.category_name %></span>
+			<p>Enough for: <%= @recipe.number_of_persons %></p>
+			<p>Time required for preparation: <%= @recipe.preparation_time %></p>
+			<p>Description: <%= @recipe.description %></p>
+			<h3>Ingredients:</h3><p><%= @recipe.ingredients %></p>
+			<h3>Directions:</h3><p><%= @recipe.method %></p>
+		</div>
 	</div>
+</div>
 
 
 

@@ -4,6 +4,8 @@ class FoodRecipe < ActiveRecord::Base
 	has_many :users, :through => :likes
 	has_many :comments
 	has_many :users, :through => :comments
+
+	validates :name, :category_id, :method, :ingredients, :image, presence: true
 	def category_name
 		self.category.name
 	end

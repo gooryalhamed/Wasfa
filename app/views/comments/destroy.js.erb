@@ -1,1 +1,2 @@
-$("#recipe-comments p").remove("#<%= @comment.id %>")
+$("#recipe-comments p").remove("#<%= @comment.id %>");
+$('.row h4').text('<%= @recipe.numof_comments %> Comments');

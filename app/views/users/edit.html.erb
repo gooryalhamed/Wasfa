@@ -22,20 +22,14 @@
 				<%= form_for(current_user) do |f| %>
 				<%= f.label :username %>
 				<%= f.text_field :username, {:readonly=> true} %>
-				<%= f.submit "update" %>
-				<% end %>
 				<i class="fa fa-pencil edit-username" aria-hidden="true"></i>
 			</div>
 			<div class="row">
-				<%= form_for(current_user) do |f| %>
 				<%= f.label :email %>
 				<%= f.text_field :email, {:readonly=> true} %>
-				<%= f.submit "update" %>
-				<% end %>
 				<i class="fa fa-pencil edit-email" aria-hidden="true"></i>
 			</div>
 			<div class="row">
-				<%= form_for(current_user) do |f| %>
 				<%= f.label :profile_img, "Profile Picture" %>
 				<%= f.file_field :profile_img %>
 				<%= f.submit "update" %>

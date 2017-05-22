@@ -15,8 +15,8 @@
 					</span> people like this
 				</div>
 
-				<% if current_user %>
-				<!-- don't show comments when user ins't signedin -->
+				<% if user_signed_in? %>
+				<!-- don't show write a comment when user ins't signedin -->
 				<div class="row">
 					<div class="col-xs-2" id="curren-user-name">
 						<span><%= current_user.username %></span>
@@ -39,13 +39,16 @@
 				<% @recipe.comments.each do |comment| %>
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
-					<span id="img-user"><%= image_tag('profile.png') %></span>
-					<%= comment.content %>
+					<span id="img-user"><%= image_tag("/uploads/#{current_user.profile_img}") %></span>
+					<%= comment.content %>&emsp;
 					<% if comment.user_id == current_user.try(:id) %>
-					<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">Edit</a>
-					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>" data-method="delete" data-remote="true">Delete</a>
+					<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">
+					Edit
+					</a>
+					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>" data-method="delete" data-remote="true">Delete
+					</a>
 				</p>
-					<% end %>
+				<% end %>
 				<% end %> <!-- if comment.id -->
 				<% end %> <!-- do block -->
 			</div>

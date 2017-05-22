@@ -89,6 +89,7 @@ header .box p a{color:#303030}
   font-size: 16px;padding: 10px 32px;cursor:pointer;
 }
 .text, .text:hover{text-decoration:none;color:#fff}
+
 /**** recipe show page ***/
 .recipe-container{margin-top:40px;background-color:#fff;color:#202020;
 padding:30px
@@ -113,8 +114,7 @@ cursor:pointer;font-size:130%;
 height:50px;text-align:center;padding-top:15px
 }
 #newcomm-frm{padding-left:0}
-
-
+#recipe-comments img{max-width:8%}
 
 /**** profile ***/
 .profile header{margin-top:40px;padding:50px 100px;

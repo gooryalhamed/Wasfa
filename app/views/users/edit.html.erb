@@ -8,59 +8,42 @@
 	
 </head>
 <body>
-	<nav class="row" id="upper-nav">
-		<div class="col-xs-6" id="logo">
-			<h1>Wasfa</h1>
-			<%= image_tag('Soup-icon.png') %>
-		</div>
-		<div class="col-xs-4">
-			<p class="notice"><%= notice %></p>
-		</div>
-	</nav>
 	<!-- header -->
+
 	<div class="container profile">
 		<header>
-			<div class="row">
+			<div class="row" id="first-r">
 				<div class="col-xs-12">
 					<i class="fa fa-cog" aria-hidden="true" id="gear"></i>
 					<span>Account Settings</span>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-6">
-					<hr>
-				</div>
+				<%= form_for(current_user) do |f| %>
+				<%= f.label :username %>
+				<%= f.text_field :username, {:readonly=> true} %>
+				<%= f.submit "update" %>
+				<% end %>
+				<i class="fa fa-pencil edit-username" aria-hidden="true"></i>
 			</div>
-			<div class="row" id="text">
-				<div class="col-xs-2">
-					<p id="name">User Name</p> 
-				</div>
-				<div class="col-xs-4">
-					<%= form_for(current_user) do |f| %>
-					<%= f.text_field :username, {:readonly=> true} %>
-					<%= f.submit "update" %>
-					<% end %>
-				</div>
-				<div class="col-xs-1">
-					<i class="fa fa-pencil edit-username" aria-hidden="true"></i>
-				</div>
+			<div class="row">
+				<%= form_for(current_user) do |f| %>
+				<%= f.label :email %>
+				<%= f.text_field :email, {:readonly=> true} %>
+				<%= f.submit "update" %>
+				<% end %>
+				<i class="fa fa-pencil edit-email" aria-hidden="true"></i>
 			</div>
-			<div class="row" id="text">
-				<div class="col-xs-2">
-					<p>Contact</p> 
-				</div>
-				<div class="col-xs-4">
-					<%= form_for(current_user) do |f| %>
-					<%= f.text_field :email, {:readonly=> true} %>
-					<%= f.submit "update" %>
-					<% end %>
-				</div>
-				<div class="col-xs-1">
-					<i class="fa fa-pencil edit-email" aria-hidden="true"></i>
-				</div>
+			<div class="row">
+				<%= form_for(current_user) do |f| %>
+				<%= f.label :profile_img, "Profile Picture" %>
+				<%= f.file_field :profile_img %>
+				<%= f.submit "update" %>
+				<% end %>
 			</div>
-		</header>
-	</div>
-	<%= javascript_include_tag 'users' %>
+		</div>
+	</header>
+</div>
+<%= javascript_include_tag 'users' %>
 </body>
 </html>

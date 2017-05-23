@@ -40,8 +40,9 @@
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
 					<span id="img-user">
-						<%= image_tag("/uploads/#{current_user.profile_img}") %>
+						<%= image_tag("/uploads/#{User.where('id = ?', comment.user_id).first.profile_img}") %>
 					</span>
+
 					<span class="content">
 						<%= comment.content %>
 					</span>&emsp;

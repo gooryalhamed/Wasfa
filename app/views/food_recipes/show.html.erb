@@ -40,7 +40,11 @@
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
 					<span id="img-user">
+						<% if User.where('id = ?', comment.user_id).first.profile_img != "user.png" %>
 						<%= image_tag("/uploads/#{User.where('id = ?', comment.user_id).first.profile_img}") %>
+						<% else %>
+						<%= image_tag('user.png') %>
+						<% end %>
 					</span>
 
 					<span class="content">

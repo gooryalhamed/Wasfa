@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-	before_action :find_comment, only: [:show, :edit, :update, :destroy]
+	before_action :find_comment, only: [:edit, :update, :destroy]
 	before_action :find_recipe, only: [:create,:show, :edit, :update, :destroy]
 	def create
 		@comment = @recipe.comments.create(params_comment)
@@ -9,15 +9,21 @@ class CommentsController < ApplicationController
 			format.js
 		end
 	end
-	def index
-	end
 	def edit
+		respond_to do |format|
+			format.html{redirect_to @recipe}
+			format.js
+		end
 	end
-	def show	
-	end
+
 	def update
-		
+		@comment.update(params_comment)
+		respond_to do |format|
+			format.html{redirect_to @recipe}
+			format.js
+		end
 	end
+
 	def destroy
 		@comment.destroy
 		@recipe.update(:numof_comments=>@recipe.numof_comments-1)

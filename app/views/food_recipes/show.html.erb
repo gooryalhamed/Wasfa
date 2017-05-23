@@ -39,16 +39,18 @@
 				<% @recipe.comments.each do |comment| %>
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
-					<span id="img-user"><%= image_tag("/uploads/#{current_user.profile_img}") %></span>
-					<%= comment.content %>&emsp;
+					<span id="img-user">
+					<%= image_tag("/uploads/#{current_user.profile_img}") %>
+					</span>
+					<span class="content"><%= comment.content %>
+					</span>&emsp;
 					<% if comment.user_id == current_user.try(:id) %>
-					<a href="/food_recipes/<% @recipe.id %>/comments/<%comment.id %>/edit" data-remote="true">
-					Edit
+					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>/edit" data-remote="true">Edit
 					</a>
 					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>" data-method="delete" data-remote="true">Delete
 					</a>
+					<% end %>
 				</p>
-				<% end %>
 				<% end %> <!-- if comment.id -->
 				<% end %> <!-- do block -->
 			</div>

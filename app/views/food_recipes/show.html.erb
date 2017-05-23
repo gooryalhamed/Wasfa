@@ -40,9 +40,10 @@
 				<% if comment.id %>
 				<p id="<%= comment.id %>">
 					<span id="img-user">
-					<%= image_tag("/uploads/#{current_user.profile_img}") %>
+						<%= image_tag("/uploads/#{current_user.profile_img}") %>
 					</span>
-					<span class="content"><%= comment.content %>
+					<span class="content">
+						<%= comment.content %>
 					</span>&emsp;
 					<% if comment.user_id == current_user.try(:id) %>
 					<a href="/food_recipes/<%= @recipe.id %>/comments/<%= comment.id %>/edit" data-remote="true">Edit

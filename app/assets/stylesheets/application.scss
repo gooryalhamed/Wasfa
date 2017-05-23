@@ -115,6 +115,8 @@ height:50px;text-align:center;padding-top:15px
 }
 #newcomm-frm{padding-left:0}
 #recipe-comments img{max-width:8%}
+#recipe-comments form{display:inline}
+#recipe-comments input[type=text]{width:70%;height:50px}
 
 /**** profile ***/
 .profile header{margin-top:40px;padding:50px 100px;

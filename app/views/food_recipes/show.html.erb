@@ -5,6 +5,7 @@
 				<%= image_tag("/uploads/#{@recipe.image}") %>
 			</div>
 			<div class = "row" id="recipe-interact">
+				<% if user_signed_in? %>
 				<div class="col-xs-12">
 					<%= form_for @recipe, remote: true do |f| %>
 					<%= f.submit %>
@@ -14,7 +15,14 @@
 						<%= @recipe.numof_likes %>
 					</span> people like this
 				</div>
-
+				<% else %>
+				<div class="col-xs-12">
+					<i class="fa fa-thumbs-o-up" id="like-btn" aria-hidden="true"></i>
+					<span id="likes-div">
+						<%= @recipe.numof_likes %>
+					</span> people like this
+				</div>
+				<% end %>
 				<% if user_signed_in? %>
 				<!-- don't show write a comment when user ins't signedin -->
 				<div class="row">

@@ -8,14 +8,15 @@ class Admin::FoodRecipesController < ApplicationController
 		@recipe = FoodRecipe.new
 	end
 	def create
-		@recipe = FoodRecipe.new(recipe_params)
 		uploaded_io = params[:food_recipe][:image]
 		File.open(Rails.root.join('public','uploads',uploaded_io.original_filename), "wb") do |file|
 			file.write(uploaded_io.read)
 		end
+		@recipe = FoodRecipe.new(recipe_params)
 		@recipe.image = uploaded_io.original_filename
-		@recipe.save
-		redirect_to admin_food_recipes_path
+		if @recipe.save
+			redirect_to admin_food_recipes_path
+		end
 	end
 	def edit
 	end
